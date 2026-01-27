@@ -1,0 +1,44 @@
+note right of Advertiser App
+Start Advertising
+end note
+Advertiser App->>Advertiser Stack: sl_bt_advertiser_start
+
+note over Advertiser Stack, Scanner Stack
+    The advertiser is now periodically sending advertising packets on at least
+    one of the three primary channels, the scanner is in idle
+end note
+
+note left of Scanner App
+Start Scanning
+end note
+
+Scanner App->>Scanner Stack: sl_bt_scanner_start
+
+note over Scanner Stack
+The scanner stack listens periodically
+for incoming advetising packets
+end note
+
+loop Until timeout event occurs
+    Advertiser Stack-->>Scanner Stack: Advert
+
+    Scanner Stack->>Scanner App: sl_bt_evt_scanner_scan_report
+    note left of Scanner App
+    retrieve advertiser BT address and address type,
+    packet type, rssi, bonding handle,
+    broadcast data (if present, max 31 bytes)
+    end note
+    opt Active scanning
+      Scanner Stack-->>Advertiser Stack: SCAN_REQ
+      Advertiser Stack->>Advertiser App: sl_bt_evt_advertiser_scan_request
+      Advertiser Stack-->>Scanner Stack: SCAN_RSP
+      Scanner Stack->>Scanner App: sl_bt_evt_scanner_scan_report
+      note right of Advertiser App
+      retrieve scanner BT address and address type
+      end note
+    end
+end
+
+note over Scanner Stack, Advertiser Stack
+From then on, a connection can be established.
+end note

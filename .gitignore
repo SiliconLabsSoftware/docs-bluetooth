@@ -15,6 +15,7 @@
 **/GNU ARM v*
 **/IAR ARM*
 **/sonar-bw/
+_sdm/
 
 ##Enable these if you are not tracking Simplicity studio project
 # **/.cproject

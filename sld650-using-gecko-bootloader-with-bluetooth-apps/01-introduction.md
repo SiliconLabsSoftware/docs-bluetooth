@@ -1,0 +1,11 @@
+# Overview
+
+The Silicon Labs Gecko Bootloader is a common bootloader for all the newer MCUs and wireless MCUs from Silicon Labs. The Gecko Bootloader can be configured to perform a variety of bootloader functions, from device initialization to firmware upgrades. The Gecko Bootloader uses a proprietary format for its upgrade images, called GBL (Gecko Bootloader). Currently two formats are actively supported, GBL3 (or just GBL) for Series 2 or older and GBL4 for Series 3. These images are produced with the file extension “.gbl”. Additional information on the GBL file format is provided in [Bootloader Fundamentals](https://docs.silabs.com/bootloader/latest/bootloader-fundamentals/).
+
+The Gecko Bootloader has a two-stage design, where a minimal first stage bootloader is used to upgrade the main bootloader. The first stage bootloader only contains functionality to read from and write to fixed addresses in internal flash. To perform a main bootloader upgrade, the running main bootloader verifies the integrity and authenticity of the bootloader upgrade image file. The running main bootloader then writes the upgrade image to a fixed location in flash and issues a reboot into the first stage bootloader. The first stage bootloader verifies the integrity of the main bootloader firmware upgrade image, by computing a CRC32 checksum before copying the upgrade image to the main bootloader location.
+
+The Gecko Bootloader can be configured to perform firmware upgrades in standalone mode (also called a standalone bootloader) or in application mode (also called an application bootloader), depending on the software component configuration. Software components can be enabled and configured through the Simplicity Studio IDE.
+
+This document describes how to configure and use the Gecko Bootloader for device firmware upgrades [over UART](./02-bgapi-uart-device-firmware-upgrade-dfu.md), and for OTA (over-the-air) upgrades [using Bluetooth](./03-bluetooth-ota-upgrade.md).
+
+The Gecko Bootloader does not come bundled into the application example projects (although some precompiled demos do contain it). Therefore, you must compile and load the bootloader separately from the application image.

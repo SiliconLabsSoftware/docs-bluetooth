@@ -1,0 +1,22 @@
+note over Client App,Client Stack,Server Stack,Server App
+    Devices connected to each other. Connection parameters, MTU and PHY settings have been exchanged. The primary services have been discovered.
+end note
+
+note right of Client App
+    Enable the notification
+end note
+
+Client App->>Client Stack: sl_bt_gatt_set_characteristic_notification
+activate Server Stack
+activate Client Stack
+
+Client Stack-->>Server Stack: Write Request
+Server Stack->>Server App: sl_bt_evt_gatt_server_characteristic_status
+Server Stack-->>Client Stack: Write Response
+Client Stack->>Client App: sl_bt_evt_gatt_procedure_completed
+
+loop Until the notification is disabled (write to characteristic descriptor)
+  Server App->>Server Stack: sl_bt_gatt_server_send_notification
+  Server Stack-->>Client Stack: Handle Value Notification
+  Client Stack->>Client App: sl_bt_evt_gatt_characteristic_value
+end

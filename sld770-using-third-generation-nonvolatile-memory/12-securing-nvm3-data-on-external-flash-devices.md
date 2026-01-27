@@ -1,0 +1,7 @@
+# Securing NVM3 Data on External Flash Devices
+
+Series-3 devices do not have on-die NVM. Since off-chip memory such as external flash is vulnerable to persistent attacks, data objects are securely stored and retrieved from the external flash using AES-GCM authenticated encryption. On Series-3 devices, the NVM3 AES-128 symmetric key is used to encrypt the data, ensuring it cannot be read in plain text from the external flash. The NVM3 AES-128 symmetric key is a device-generated, non-exportable key stored in the Secure Engine MTP. The NVM3 symmetric key is invalidated or erased during a device erase. Any attempt to load previously recorded NVM3 data (encrypted with the older key) into flash will result in invalid reads and must be avoided. In the case of a device erase, it is essential to reinitialize the NVM3 instance and add the objects again. For details about DFA and DPA countermeasures and the AES engines being used, refer to [Secure Key Storage](https://docs.silabs.com/iot-security/latest/efr32-secure-key-storage/).
+
+## Impact of External Flash and Security on Repack Timings
+
+For Series-3 devices using external flash, repack operations may take longer due to the increased latency of accessing external flash over the bus. Additionally, with security features such as authenticated encryption (AES-GCM) enabled, the repack timings may be further impacted due to the cryptographic overhead. It is recommended to schedule repack operations during periods of low CPU and bus activity to minimize the impact on application performance.

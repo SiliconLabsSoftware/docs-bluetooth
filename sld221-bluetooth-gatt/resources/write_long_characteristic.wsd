@@ -1,0 +1,35 @@
+note over Client App,Client Stack,Server Stack,Server App
+    Devices connected to each other. Connection parameters, MTU and PHY settings have been exchanged. The primary services have been discovered.
+end note
+
+note right of Client App
+  Write characteristic
+end note
+
+Client App->>Client Stack: sl_bt_gatt_write_characteristic_value
+activate Server Stack
+activate Client Stack
+
+loop Until total lenght of the characteristics has been sent by chunks of (ATT_MTU-3) bytes length
+  Client Stack-->>Server Stack: Write Request[PREPARE WRITE]
+  Server Stack->>Server App: sl_bt_evt_gatt_server_user_write_request
+  note over Server App
+    A transaction not completed within 30 seconds shall time out.
+    Such a transaction shall be considered to have failed and
+    the local higher layers shall be informed of this failure.
+    For further application level communication, the devices
+    will have to drop the connection and reconnect to each other.
+  end note
+  Server App->>Server Stack: sl_bt_gatt_server_send_user_write_response 
+  Server Stack-->>Client Stack: Write Response[PREPARE WRITE]
+end
+
+Client Stack-->>Server Stack: Write Request[EXECUTE WRITE]
+Server Stack->>Server App: sl_bt_evt_gatt_server_user_write_request
+note over Server App
+  Execute write of the message queue
+end note
+Server App->>Server Stack: sl_bt_gatt_server_send_user_write_response
+Server Stack-->>Client Stack: Write Response[EXECUTE WRITE]
+
+Client Stack->>Client App: sl_bt_evt_gatt_procedure_complete

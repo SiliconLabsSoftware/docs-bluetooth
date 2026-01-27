@@ -1,0 +1,38 @@
+note over Scanner/Central App, Scanner/Central Stack, Advertiser/Peripheral Stack, Advertiser/Peripheral App
+Prior to the connection, the advertiser sends some advertising packet and the scanner is listening to the incoming packets.
+end note
+
+note right of Scanner/Central App
+Trigger connection event
+end note
+Scanner/Central App->>Scanner/Central Stack: sl_bt_connection_open
+note right of Scanner/Central Stack
+Now the stack is scanning with high priority to find the advertisement of the chosen peer device
+end note
+
+
+alt Connection cancellation
+  Scanner/Central App->>Scanner/Central Stack: sl_bt_connection_close
+  Scanner/Central Stack->>Scanner/Central App: sl_bt_evt_connection_closed
+else Connection timeout
+  Advertiser/Peripheral Stack-->>Scanner/Central Stack: Advert
+  Scanner/Central Stack-->>Advertiser/Peripheral Stack: CONNECT_IND
+  activate Advertiser/Peripheral Stack
+  activate Scanner/Central Stack
+
+  note over Scanner/Central Stack, Advertiser/Peripheral Stack
+  Devices are now connected to each other. The connection request packet
+  contains the data channel increment (also called "hop increment"). From
+  now on, a data channel is being used instead of one of the three primary
+  channels.
+  end note
+
+  Advertiser/Peripheral Stack->>Advertiser/Peripheral App: (sl_bt_evt_connection_opened)
+  Scanner/Central Stack->>Scanner/Central App: sl_bt_evt_connection_opened
+  note over Scanner/Central Stack, Advertiser/Peripheral Stack: 6 connection intervals with no packets from the peripheral.
+
+  Scanner/Central Stack->>Scanner/Central App: sl_bt_evt_connection_closed
+  deactivate Advertiser/Peripheral Stack
+  deactivate Scanner/Central Stack
+
+end
