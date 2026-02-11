@@ -76,8 +76,50 @@
           ]
         },
         {
-          "title": "Bluetooth LE Fundamentals",
-          "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-le-fundamentals/"
+          "id": "bluetooth-le-fundamentals",
+          "title": "Bluetooth Le Fundamentals",
+          "menu": [
+            {
+              "match": "sld695-bluetooth-le-fundamentals/index.md",
+              "title": "Introduction"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/01-background.md",
+              "title": "Background"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/02-bluetooth-smart-architecture.md",
+              "title": "Bluetooth LE Architecture"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/03-physical-layer.md",
+              "title": "Physical Layer"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/04-link-layer.md",
+              "title": "Link Layer"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/05-generic-access-profile-gap.md",
+              "title": "Generic Access Profile (GAP)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/06-attribute-protocol-att.md",
+              "title": "Attribute Protocol (ATT)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/07-generic-attribute-profile-gatt.md",
+              "title": "Generic Attribute Profile (GATT)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/08-bluetooth-smart-security.md",
+              "title": "Bluetooth LE Security"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/09-next-steps.md",
+              "title": "Next Steps"
+            }
+          ]
         },
         {
           "id": "bluetooth-fundamentals-advertising-scanning",
@@ -362,8 +404,26 @@
               ]
             },
             {
-              "title": "Gatt Configurator Users Guide Ble Btmesh",
-              "url": "https://docs.silabs.com/bluetooth/latest/gatt-configurator-users-guide-ble-btmesh/"
+              "id": "gatt-configurator-users-guide-ble-btmesh",
+              "title": "GATT Configurator User's Guide for Bluetooth LE and Bluetooth Mesh",
+              "menu": [
+                {
+                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/index.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/01-gatt-configurator-overview.md",
+                  "title": "GATT Configurator Overview"
+                },
+                {
+                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/02-use-cases.md",
+                  "title": "Use Cases"
+                },
+                {
+                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/03-dynamic-gatt-configuration.md",
+                  "title": "Dynamic GATT Configuration"
+                }
+              ]
             },
             {
               "id": "bluetooth-profile-toolkit-developers-guide",
@@ -388,8 +448,34 @@
               ]
             },
             {
-              "title": "Network Analyzer With Ble Btmesh",
-              "url": "https://docs.silabs.com/bluetooth/latest/network-analyzer-with-ble-btmesh/"
+              "id": "network-analyzer-with-ble-btmesh",
+              "title": "Using Network Analyzer With Bluetooth Low Energy and Mesh",
+              "menu": [
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/02-hardware-and-packet-trace-interface-pti.md",
+                  "title": "Hardware and Packet Trace Interface"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/03-network-analyzer-features.md",
+                  "title": "Network Analyzer Features"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/04-network-analyzer-for-bluetooth-le-and-mesh.md",
+                  "title": "Network Analyzer for Bluetooth LE and Mesh"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/05-bluetooth-mesh-networking-and-the-network-analyzer.md",
+                  "title": "Bluetooth Mesh Networking and the Network Analyzer"
+                }
+              ]
             },
             {
               "title": "Transitioning from the v2.x to the v3.x Bluetooth SDK (PDF)",
@@ -431,12 +517,72 @@
               ]
             },
             {
-              "title": "Bluetooth Network Coprocessor Mode",
-              "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-network-coprocessor-mode/"
+              "id": "bluetooth-network-coprocessor-mode",
+              "title": "Using the Bluetooth Stack in Network Co-Processor Mode",
+              "menu": [
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/index.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/02-ncp-target-development.md",
+                  "title": "NCP Target Development"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/03-ncp-host-development.md",
+                  "title": "NCP Host Development"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/04-secure-ncp.md",
+                  "title": "Secure NCP"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/05-using-ncp-with-cpc.md",
+                  "title": "Using NCP with CPC ( Co-Processor Communication)"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/06-example-project-walkthrough.md",
+                  "title": "Example Project Walkthrough"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/07-custom-api-support.md",
+                  "title": "Custom API Support"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/08-adding-a-new-service-to-the-ncp-example-with-dynamic-gatt-api.md",
+                  "title": "Adding New Attributes To The GATT Database"
+                }
+              ]
             },
             {
+              "id": "enabling-rcp-using-bt-hci",
               "title": "Enabling Rcp Using Bt Hci",
-              "url": "https://docs.silabs.com/bluetooth/latest/enabling-rcp-using-bt-hci/"
+              "menu": [
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/02-enabling-hci-functionality.md",
+                  "title": "Enabling HCI Funtionality"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/03-sleep-modes.md",
+                  "title": "Sleep Modes"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/04-vendor-specific-hci-commands-and-events.md",
+                  "title": "Vendor Specific HCI Commands and Events"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/05-configuring-hardware-flow-control-in-the-wstk.md",
+                  "title": "Configuring Hardware Flow Control in the WSTK"
+                }
+              ]
             }
           ]
         },
@@ -742,8 +888,30 @@
               "url": "https://docs.silabs.com/bluetooth/latest/iot-endpoint-security-fundamentals/"
             },
             {
+              "id": "bluetooth-application-security-design-considerations",
               "title": "Bluetooth Application Security Design Considerations",
-              "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-application-security-design-considerations/"
+              "menu": [
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/02-working-with-stack-security-features.md",
+                  "title": "Working with Stack Security Features"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/03-privacy-and-tracking.md",
+                  "title": "Privacy and Tracking"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/04-application-layer-security.md",
+                  "title": "Application Llayer Security"
+                }
+              ]
             },
             {
               "title": "Series 2 Secure Debug",
