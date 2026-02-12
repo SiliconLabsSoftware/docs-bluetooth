@@ -1,11 +1,11 @@
 name: 04-TruffleHog-Security-Scan
 on:
-    pull_request:
-        branches:
-            - main
-            - master
-            - develop
-            - "release/**"
+  pull_request:
+    branches:
+      - main
+      - master
+      - develop
+      - "release/**"
 jobs:
   trufflehog_scan:
     runs-on: ubuntu-24.04
