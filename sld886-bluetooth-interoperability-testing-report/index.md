@@ -7,7 +7,7 @@ This application note includes the results of the interoperability testing of Si
 ## Key Points
 
 - Scan, connection, discovery, and GATT operations tested
-- OTA (Over the Air) updates, Throughput and Security features also tested
+- Over the Air (OTA) updates, Throughput and Security features also tested
 - EFR32xG13, EFR32xG21 and EFR32xG22 tested
 - Tested against mobile devices with both Android and iOS across various OS versions
 - 354 devices tested
