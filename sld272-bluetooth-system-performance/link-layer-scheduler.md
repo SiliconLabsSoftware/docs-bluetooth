@@ -6,12 +6,12 @@ Link Layer scheduling defines how Bluetooth radio tasks share airtime on the con
 
 A *task* is any Link Layer radio activity that must occur at scheduled intervals. The Bluetooth controller treats the following as tasks:
 
-- One or more **connection events**
-- **Advertising**
-- **Scanning**
-- **Channel Sounding**
-- **Periodic Advertising with Responses (PAwR)** transmissions and  receptions
-- **Multiple PAwR trains**, each considered a separate task
+- One or more connection events
+- Advertising
+- Scanning
+- Channel Sounding
+- Periodic Advertising with Responses (PAwR) transmissions and  receptions
+- Multiple PAwR trains, each considered a separate task
 
 Tasks have intervals, required runtime, and anchor points. The scheduler divides radio time between tasks while attempting to avoid overlaps.
 
@@ -40,10 +40,10 @@ Basic scheduling does not attempt to optimize latency or throughput. It ensures 
 
 Best for:
 
-- Advertising / **Peripheral low‑throughput** applications
-- Applications where **latency is not critical**
-- **PAwR synchronizers**
-- Designs requiring **lowest RAM, flash, and power usage**
+- Advertising / Peripheral low‑throughput applications
+- Applications where latency is not critical
+- PAwR synchronizers
+- Designs requiring lowest RAM, flash, and power usage
 
 ### Even Anchor Selection Algorithm
 
@@ -57,7 +57,7 @@ the initiator
 
 Behavior:
 
-- Tries to **maximize airtime for connection events**
+- Tries to maximize airtime for connection events
 - Distributes anchors evenly across the interval for balanced use across connections
 
 Tradeoffs:
@@ -73,7 +73,7 @@ Enabled when *Bluetooth Controller Anchor Selection* is installed and **Anchors 
 Best for:
 
 - Devices acting as **Central + PAwR Advertiser**
-- Use cases where **PAwR subevents** and **connections** share the same
+- Use cases where PAwR subevents and connections share the same
 interval
 
 Behavior:
@@ -86,8 +86,6 @@ Multiple PAwR trains:
 
 - Each train is treated as a separate task
 - Developers must ensure **system‑level timing** prevents PAwR response slot overlap
-
-------------------------------------------------------------------------
 
 ## Task Runtime Considerations
 
@@ -103,8 +101,6 @@ their intervals:
 
 A full PAwR use‑case example is available internally.
 
-------------------------------------------------------------------------
-
 ## Configuration Parameters
 
 The *Bluetooth Low Energy Controller* component provides parameters affecting scheduling.
@@ -119,21 +115,15 @@ Transmitting + receiving 251‑byte packets on 1M PHY requires ~4.3 ms.
 
 If the Host sets a larger minimum event length, the scheduler uses the larger value.
 
-------------------------------------------------------------------------
-
 ### Bluetooth Controller Connection Event Extension
 
 Allows connection events to extend beyond their scheduled window if they still have data to exchange and have not exceeded the maximum connection event length. This may temporarily overrun lower‑priority tasks.
-
-------------------------------------------------------------------------
 
 ### Bluetooth Controller Scanner Reception Early Abort
 
 Allows the scanner to abort packet reception if continuing would delay a
 higher‑priority task.. Useful for ensuring extended advertisements do not overrun upcoming
 scheduled tasks.
-
-------------------------------------------------------------------------
 
 ## Choosing a Scheduling Algorithm
 
@@ -156,8 +146,6 @@ Choose **Empty Center Anchor Selection** when:
 - Central + PAwR Advertiser roles
 - PAwR and connections share intervals
 - Developer can ensure PAwR train timing does not overlap
-
-------------------------------------------------------------------------
 
 ## Summary
 
