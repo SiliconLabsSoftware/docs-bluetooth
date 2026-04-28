@@ -1,9 +1,11 @@
 # Bluetooth Link Layer Scheduling
 
 Link Layer scheduling defines how Bluetooth radio tasks share airtime on the controller. This document describes the available scheduling algorithms, Link Layer task types, anchor placement concepts, and configuration parameters. The goal is to help developers choose the most appropriate scheduling mode for their application.
+Link Layer scheduling defines how Bluetooth radio tasks share airtime on the controller. This document describes the available scheduling algorithms, Link Layer task types, anchor placement concepts, and configuration parameters. The goal is to help developers choose the most appropriate scheduling mode for their application.
 
 ## Link Layer Tasks
 
+A *task* is any Link Layer radio activity that must occur at scheduled intervals. The Bluetooth controller treats the following as tasks:
 A *task* is any Link Layer radio activity that must occur at scheduled intervals. The Bluetooth controller treats the following as tasks:
 
 - One or more connection events
@@ -33,6 +35,7 @@ The Bluetooth Link Layer supports three selectable scheduling algorithms. Choose
 
 Basic Scheduling is enabled when the **Bluetooth Controller Anchor Selection** component is not installed.
 
+Basic scheduling does not attempt to optimize latency or throughput. It ensures tasks share the radio and resolves conflicts only when overlaps occur.
 Basic scheduling does not attempt to optimize latency or throughput. It ensures tasks share the radio and resolves conflicts only when overlaps occur.
 
 Use Basic Scheduling for:
@@ -140,4 +143,5 @@ Choose **Empty Center Anchor Selection** when:
 
 Link Layer scheduling determines how radio airtime is shared between tasks. The right scheduler depends on device role, task mix, throughput and latency requirements, and resource constraints.
 
+The anchor selection algorithms allow improved radio‑time distribution when needed, while Basic Scheduling provides the lowest resource footprint.
 The anchor selection algorithms allow improved radio‑time distribution when needed, while Basic Scheduling provides the lowest resource footprint.
