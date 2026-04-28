@@ -68,7 +68,11 @@ Maximum Transfer Unit (MTU) specifies the number of bytes that can be sent withi
 |2.3.x|250|
 |10.0.x or later|512 or higher|
 
-Note that the MTU size depends on both sides. For example, if the remote device supports a smaller MTU size, the smaller MTU size will be used. The higher the MTU size, the higher the throughput. Twice the MTU size doubles the throughput. In the latest SDKs, the maximum ATT MTU is -in practice- only limited by the BGAPI payload size configuration. With high enough BGAPI Payload size, the full value of the characteristics can be read/written in one operation (SL_BGAPI_MAX_PAYLOAD_SIZE - 7 bytes so a total of 520 bytes for SL_BGAPI_MAX_PAYLOAD_SIZE to achieve the full 512 bytes of length to read a characteristic). This can be configured in the projects config/sl_bgapi_config.h header file or on the User Interface for SoC/NCP projects (Software Components > Bluetooth > Bluetooth Host (Stack) > BGAPI Protocol):
+Note that the MTU size depends on the capabilities of both devices. If the remote device supports a smaller MTU size, the smaller MTU size is used. In general, a larger MTU size allows higher throughput. For example, if the MTU size is doubled, throughput may be double. In the latest SDKs, the maximum ATT MTU is, in practice, limited only by the configured BGAPI payload size. 
+
+With a sufficiently large BGAPI payload size, the full characteristic value can be read or written in a single operation. The maximum characteristic value length that can be transferred in one operation is `SL_BGAPI_MAX_PAYLOAD_SIZE - 7` bytes. Therefore, to support the full 512‑byte length, SL_BGAPI_MAX_PAYLOAD_SIZE must be set to 520 bytes. 
+
+This value can be configured in the project `config/sl_bgapi_config.h` header file or through the user interface for SoC/NCP projects under **Software Components > Bluetooth > Bluetooth Host (Stack) > BGAPI Protocol**:
 
 ![Unacknowledged data transfer](resources/bgapi_max_payload_size.png?darkModeUrl=resources/bgapi_max_payload_size.png)
 
