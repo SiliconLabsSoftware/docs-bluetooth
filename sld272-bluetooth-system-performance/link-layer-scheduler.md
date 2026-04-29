@@ -11,7 +11,7 @@ A *task* is any Link Layer radio activity that must occur at scheduled intervals
 - Scanning
 - Channel Sounding
 - Periodic Advertising with Responses (PAwR) transmissions and receptions
-- Multiple PAwR trains, where each train counts as a separate task
+- Multiple PAwR trains, where each train is considered a separate task
 
 Each task has an interval, a required runtime, and an anchor point. The scheduler divides radio time between tasks while attempting to avoid overlaps.
 
@@ -22,7 +22,7 @@ An *anchor point* is the reference time for a repeating Link Layer procedure, su
 Anchor placement matters for the following reasons:
 
 - It affects throughput, latency, and coexistence between tasks.
-- Efficient anchor distribution uses radio time without unnecessary conflicts.
+- Efficient anchor distribution ensures radio time is used without unnecessary conflicts.
 - Misaligned anchors can reduce available airtime or increase the likelihood of a collision.
 
 ## Scheduling Algorithms
@@ -102,7 +102,7 @@ The **Bluetooth Low Energy Controller** component provides parameters that affec
 
 Hints to the scheduler to reserve a minimum runtime for each connection.
 
-Example: Transmitting and receiving 251-byte packets on the 1M PHY requires ~4.3 ms.
+Example: Transmitting and receiving 251-byte packets on a 1M PHY requires ~4.3 ms.
 
 If the Host sets a larger minimum event length, the scheduler uses the larger value.
 
@@ -137,7 +137,7 @@ Choose **Empty Center Anchor Selection** when:
 
 ## Summary
 
-Link Layer scheduling determines how radio airtime is shared between tasks. The right scheduler depends on device role, task mix, throughput and latency requirements, and resource constraints.
+Link Layer scheduling determines how radio airtime is shared between tasks. Choosing the most appropriate scheduler depends on your device role, task mix, throughput and latency requirements, and resource constraints.
 
 The anchor selection algorithms allow improved radio‑time distribution when needed, while Basic Scheduling provides the lowest resource footprint.
 
