@@ -450,3 +450,13 @@ display_image 2 0 0
 Since the tag `8C:F6:81:B8:83:18` was unassociated from the network instead of factory reset, all the images stored to it were preserved, and therefore the tag can display the images after associating to a network.
 
 ![Since the tag 8C:F6:81:B8:83:18 was unassociated from the network instead of factory reset, all the images stored to it were preserved, and therefore the tag can display the images after associating to a network.](resources/sld679-image40.png)
+
+## ESL image throughput stress test
+
+The `image_throughput` command starts or stops an ESL image transfer stress test across synchronized ESL Tags. During the test, the Access Point repeatedly performs image transfers to eligible synchronized Tags to validate throughput, stability, and PAwR-based image distribution performance under load.
+
+The test supports limiting the number of participating Tags (`--max_count`) and restricting enrollment to Tags within a maximum ESL group ID (`--max_group`). While running, the AP temporarily switches to manual mode and restores the previous operating mode automatically when the test finishes or is stopped. The test requires PAwR to be active, synchronized ESLs that support image transfer, and demo mode to be disabled.
+
+For full command usage, options, notes, and examples, see:
+
+`bt_host_esl_ap/esl_ap/readme/readme.md`
