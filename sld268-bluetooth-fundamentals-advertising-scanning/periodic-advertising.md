@@ -11,6 +11,8 @@ Important points about Periodic Advertising are as follows:
 2. At least one advertisement packet needs to be sent to enable periodic advertising.
 3. It will use the same PHY as the auxiliary packet. Each periodic advertiser has the same parameters as connection. Additionally, the channel is also determined the same way as connection using the Channel Selection Algorithm #2.
 4. Because it is based on extended advertisements, it uses data channels as opposed to advertisements channels.
+5. Periodic advertising supports Adaptive Frequency Hopping (AFH). Similar to Bluetooth connections, the advertiser and synchronized scanners can dynamically avoid channels experiencing high interference, improving robustness and reliability in congested RF environments.
+
 
 ## Concept
 
@@ -22,7 +24,8 @@ Periodic advertising mode is indicated with the ADV_EXT_IND packets (legacy adve
 
 ![Timing of Periodic Advertising](resources/sld268-figure-1.jpg?darkModeUrl=resources/sld268-figure-1.jpg)
 
-If the data of the periodic advertisement does not fit into one packet, the AUX_SYNC_IND packet can be followed by AUX_CHAIN_IND packets. AUX_SYNC_IND along with AUX_CHAIN_IND make up a sequence of advertisements forming a periodic advertising train.
+If the data of the periodic advertisement does not fit into one packet, the AUX_SYNC_IND packet can be followed by AUX_CHAIN_IND packets. AUX_SYNC_IND along with AUX_CHAIN_IND make up a sequence of advertisements forming a periodic advertising train. Periodic advertising also supports Adaptive Frequency Hopping (AFH). Since periodic advertisements use data channels and Channel Selection Algorithm #2, the channel map can be updated to exclude channels affected by interference. This allows the periodic advertising train to adapt to changing RF conditions in a manner similar to Bluetooth LE connections.
+
 
 ![Periodic Advertising Train](resources/sld268-figure-4.png?darkModeUrl=resources/sld268-figure-4.png)
 
