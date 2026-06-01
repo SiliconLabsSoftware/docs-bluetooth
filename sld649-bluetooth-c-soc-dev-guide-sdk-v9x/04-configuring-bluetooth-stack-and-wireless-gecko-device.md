@@ -223,7 +223,7 @@ When the Bluetooth stack is used with other protocols in a multiprotocol environ
 The application needs to allocate the configuration struct and provide it for the Bluetooth stack:
 
 ```C
-sl_bt_bluetooth_ll_priorities  custom_priorities;
+sl_btctrl_ll_priorities  custom_priorities;
 static const sl_bt_configuration_t config = {
   //
   .bluetooth.linklayer_priorities = &custom_priorities,
@@ -231,9 +231,9 @@ static const sl_bt_configuration_t config = {
 };
 ```
 
-The `sl_bt_bluetooth_ll_priorities` struct must be initialized to default state by the `SL_BT_BLUETOOTH_PRIORITIES_DEFAULT` constant.
+The `sl_btctrl_ll_priorities` struct must be initialized to default state by the `SL_BT_BLUETOOTH_PRIORITIES_DEFAULT` constant.
 
-The `sl_bt_bluetooth_ll_priorities` struct contains following fields:
+The `sl_btctrl_ll_priorities` struct contains following fields:
 
 - `scan_min, scan_max, scan step` - The priority range for scan operation.
 
