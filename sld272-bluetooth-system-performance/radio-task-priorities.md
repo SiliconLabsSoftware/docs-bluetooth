@@ -53,10 +53,10 @@ For more information about Bluetooth priority handling, see [Dynamic Multiprotoc
 
 The default priorities are chosen so that they can be used well in most use cases. However, default priorities may not always provide an optimal solution. For example, if in your application it is not important to connect quickly but it is very important to send data in every connection interval via an already established connection, you can lower the priority of the connection initiation process.
 
-The minimum and maximum priorities of each task type can be defined in a `sl_bt_bluetooth_ll_priorities` structure (find the definition of the structure in sl_bt_ll_config.h). To overwrite the default priorities, add a new line to `SL_BT_CONFIG_DEFAULT` in sl_bluetooth_config.h, as you see below:
+The minimum and maximum priorities of each task type can be defined in a `sl_btctrl_ll_priorities` structure (find the definition of the structure in sl_bt_ll_config.h). To overwrite the default priorities, add a new line to `SL_BT_CONFIG_DEFAULT` in sl_bluetooth_config.h, as you see below:
 
 ```c
-sl_bt_bluetooth_ll_priorities ll_priorities = { 191, 143,  //scan_min, scan_max
+sl_btctrl_ll_priorities ll_priorities = { 191, 143,  //scan_min, scan_max
                                              175, 127,  //adv_min,  adv_max
                                              135,   0,  //conn_min, conn_max
                                              55,  15,   //init_min, init_max
