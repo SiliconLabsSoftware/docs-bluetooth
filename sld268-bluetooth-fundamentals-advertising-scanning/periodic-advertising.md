@@ -24,7 +24,9 @@ Periodic advertising mode is indicated with the ADV_EXT_IND packets (legacy adve
 
 ![Timing of Periodic Advertising](resources/sld268-figure-1.jpg?darkModeUrl=resources/sld268-figure-1.jpg)
 
-If the data of the periodic advertisement does not fit into one packet, the AUX_SYNC_IND packet can be followed by AUX_CHAIN_IND packets. AUX_SYNC_IND along with AUX_CHAIN_IND make up a sequence of advertisements forming a periodic advertising train. Periodic advertising also supports Adaptive Frequency Hopping (AFH). Since periodic advertisements use data channels and Channel Selection Algorithm #2, the channel map can be updated to exclude channels affected by interference. This allows the periodic advertising train to adapt to changing RF conditions in a manner similar to Bluetooth LE connections.
+If the data for a periodic advertisement does not fit in a single packet, the AUX_SYNC_IND packet can be followed by one or more AUX_CHAIN_IND packets. Together, AUX_SYNC_IND and AUX_CHAIN_IND form a sequence of advertisements known as a periodic advertising train.
+
+Periodic advertising also supports AFH. Because periodic advertisements use data channels and Channel Selection Algorithm #2, the channel map can be updated to exclude channels affected by interference. This allows the periodic advertising train to adapt to changing RF conditions, similar to Bluetooth LE connections.
 
 
 ![Periodic Advertising Train](resources/sld268-figure-4.png?darkModeUrl=resources/sld268-figure-4.png)
