@@ -65,9 +65,18 @@ Maximum Transfer Unit (MTU) specifies the number of bytes that can be sent withi
 |1.0.x|23|
 |2.0.x|58|
 |2.1.x|126|
-|2.3.x or later|250|
+|2.3.x|250|
+|10.0.x or later|512 or higher|
 
-Note that the MTU size depends on both sides. For example, if the remote device supports a smaller MTU size, the smaller MTU size will be used. The higher the MTU size, the higher the throughput. Twice the MTU size doubles the throughput.
+Note that the MTU size depends on the capabilities of both devices. If the remote device supports a smaller MTU size, the smaller MTU size is used. In general, a larger MTU size allows higher throughput. For example, if the MTU size is doubled, throughput may be double. In the latest SDKs, the maximum ATT MTU is, in practice, limited only by the configured BGAPI payload size. 
+
+With a sufficiently large BGAPI payload size, the full characteristic value can be read or written in a single operation. The maximum characteristic value length that can be transferred in one operation is `SL_BGAPI_MAX_PAYLOAD_SIZE - 7` bytes. Therefore, to support the full 512‑byte length, SL_BGAPI_MAX_PAYLOAD_SIZE must be set to 520 bytes. 
+
+This value can be configured in the project `config/sl_bgapi_config.h` header file or through the user interface for SoC/NCP projects under **Software Components > Bluetooth > Bluetooth Host (Stack) > BGAPI Protocol**:
+
+![Unacknowledged data transfer](resources/bgapi_max_payload_size.png?darkModeUrl=resources/bgapi_max_payload_size.png)
+
+In case of NCP setups, it is recommended to match up larger BGAPI payloads with higher UART speeds to avoid any congestion/packet loss.
 
 ### Attribute Protocol (ATT) Operation
 
@@ -86,12 +95,12 @@ MTU size includes the GATT header, which has a variable length and means that th
 For acknowledged operations, the maximum throughput can be achieved with the following parameters:
 
 - Connection interval: **7.5 ms**
-- MTU size: **250 bytes**
+- MTU size: **513 bytes**
 - Attribute protocol operation used: **Read**
 
 This results in a maximum throughput of
 
-**1000 ms / (2 * 7.5 ms) * (250 - 1) bytes = 16,600 bytes/sec = 132,800 bps**
+**1000 ms / (2 * 7.5 ms) * (513 - 1) bytes = 34,133 bytes/sec = 273,066 bps**
 
 ## Throughput Calculation for Unacknowledged Data Transfer
 
