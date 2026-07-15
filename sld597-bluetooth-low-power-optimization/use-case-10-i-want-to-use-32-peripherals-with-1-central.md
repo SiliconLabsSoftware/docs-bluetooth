@@ -1,8 +1,8 @@
 # Use Case #10: I want to exchange data with up to 32 peripheral devices
 
-This use case describes an EFR32 central that scales to 32 simultaneous EFR32 peripheral links. It provides a characterization baseline for a Bluetooth Low Energy central that scans for peripherals advertising a known custom service, opens links as peers are found, discovers the required GATT objects, enables notifications, and maintains up to 32 simultaneous connections with selectable PHY operation. A general prerequisite for handling multiple connections is described [here](https://docs.silabs.com/bluetooth/latest/bluetooth-fundamentals-connections/multi-peripheral-topology).
+This use case describes an EFR32 central that scales to 32 simultaneous EFR32 peripheral links. It provides a characterization baseline for a Bluetooth Low Energy central that scans for peripherals advertising a known custom service, opens links as peers are found, discovers the required GATT objects, enables notifications, and maintains up to 32 simultaneous connections with selectable PHY operation. For information about the general requirements for handling multiple connections, see [Multi-Peripheral Topology](https://docs.silabs.com/bluetooth/latest/bluetooth-fundamentals-connections/multi-peripheral-topology).
 
-The reference topology is one central plus up to 32 peripheral links. The software baseline is SiSDK 2025.12.3, and the hardware baseline is EFR32MG26 on BRD4116A with BRD4002A.
+The reference topology consists of one central and up to 32 peripheral connections. The software baseline is SiSDK 2025.12.3, and the hardware baseline consists of an EFR32MG26 on a BRD4116A radio board with a BRD4002A mainboard.
 
 **Bluetooth features used**: connections, legacy passive scanning, GATT service discovery, notifications, optional write-without-response traffic, and selectable 1M, 2M, or Coded PHY operation.
 
