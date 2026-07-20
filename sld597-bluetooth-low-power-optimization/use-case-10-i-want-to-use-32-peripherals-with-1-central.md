@@ -2,7 +2,7 @@
 
 This use case describes an EFR32 central that scales to 32 simultaneous EFR32 peripheral links. It provides a characterization baseline for a Bluetooth Low Energy central that scans for peripherals advertising a known custom service, opens links as peers are found, discovers the required GATT objects, enables notifications, and maintains up to 32 simultaneous connections with selectable PHY operation. For information about the general requirements for handling multiple connections, see [Multi-Peripheral Topology](https://docs.silabs.com/bluetooth/latest/bluetooth-fundamentals-connections/multi-peripheral-topology).
 
-The reference topology consists of one central and up to 32 peripheral connections. The software baseline is SiSDK 2025.12.3, and the hardware baseline consists of an EFR32MG26 on a BRD4116A radio board with a BRD4002A mainboard.
+The reference topology consists of one central and up to 32 peripheral connections. The software baseline is SiSDK 2025.12.3. The hardware baseline is an EFR32MG26 on a BRD4116A radio board with a BRD4002A mainboard.
 
 **Bluetooth features used**: connections, legacy passive scanning, GATT service discovery, notifications, optional write-without-response traffic, and selectable 1M, 2M, or Coded PHY operation.
 
@@ -26,9 +26,9 @@ The reference topology consists of one central and up to 32 peripheral connectio
 - Supervision timeout = 6000 ms.
 - DLE enabled, preferred data length = 251.
 - Even Connection Scheduling Algorithm enabled.
-- Legacy passive scanning is used to discover peripherals that advertise the custom 128-bit service UUID in the advertisement payload.
+- Use legacy passive scanning to discover peripherals that advertise the custom 128-bit service UUID in the advertising payload.
 - The central expects the peripheral GATT database to expose one custom service containing a notify characteristic for peripheral-to-central data and a write-without-response characteristic for optional central-to-peripheral traffic.
-- Additional features used in the application are listed in [Appendix A. Application features](#appendix-a-application-features).
+- For the additional application features used, see [Appendix A. Application features](#appendix-a-application-features).
 
 
 ### General Configuration Tips
@@ -72,7 +72,7 @@ The reference topology consists of one central and up to 32 peripheral connectio
 | Reserved heap | 248,640 | 0 |
 | **Total Flash** |  | **241,728** |
 
-> Note: The memory consumption under the **Application** heading in the table above includes the features listed in [Appendix A. Application features](#appendix-a-application-features) and may vary by user application. Component grouping in the table above follows [Appendix B](#appendix-b-object-file-grouping-used-for-the-memory-breakdown).
+> Note: The memory consumption reported under Application in the preceding table includes the features listed in [Appendix A. Application features](#appendix-a-application-features) and may vary depending on the application. Component grouping follows [Appendix B](#appendix-b-object-file-grouping-used-for-the-memory-breakdown).
 
 ## Failure Modes and Mitigations
 
