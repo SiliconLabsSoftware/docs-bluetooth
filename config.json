@@ -296,6 +296,10 @@
             {
               "match": "sld597-bluetooth-low-power-optimization/use-case-9-i-want-to-exchange-data-with-many-low-power-peripheral-devices.md",
               "title": "Use Case 9 I Want To Exchange Data With Many Low Power Peripheral Devices"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-10-i-want-to-use-32-peripherals-with-1-central.md",
+              "title": "Use Case 10 I Want To Use 32 Peripherals With 1 Central"
             }
           ]
         }
