@@ -4,9 +4,9 @@ Tests were performed using Silicon Labs evaluation hardware, with each product f
 
 | Setup Component |Version / Board |
 |-|-|
-| Bluetooth SDK (embedded) |3.2.4 / 3.3.2  |
-| Gecko SDK |4.0.2 |
-| EFR32 Connect |2.4.1 / 2.4.3 |
-| ERF32xG13 |BRD4104A  |
-| ERF32xG21 |BRD4181A / BRD4181B |
-| EFR32xG22 |BRD4182A  |
+| Bluetooth SDK (embedded) |10.1.1 |
+| Simplicity SDK |2025.6.2 |
+| Simplicity connect mobile application |3.2.0 |
+| ERF32xG24B |BRD4186C |
+| ERF32xG27 |BRD4194A  |
+| EFR32BG29 |BRD4414A  |
