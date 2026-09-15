@@ -1,6 +1,6 @@
 # Test Environment
 
-The overall test environment is described below.
+The following section describes the overall test evnironment.
 
 The Device under test (DUT) was placed about 1m away from the mobile phone against which the tests were executed.
 
