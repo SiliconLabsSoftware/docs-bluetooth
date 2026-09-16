@@ -65,3 +65,4 @@ Although some devices are shipped with preprogrammed bootloaders, it is always r
 - commander.exe can be found here: 
     - Studio v5: C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander
     - Studio v6: C:\Users\\<USER_NAME>\\.silabs\slt\installs\archive\Simplicity Commander
+- Before flashing, verify the start and end addresses of the bootloader and application images to ensure that their flash regions do not overlap. An overlap may overwrite part of the bootloader or application and prevent the device from booting correctly.
