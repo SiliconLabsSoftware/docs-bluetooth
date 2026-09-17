@@ -1,0 +1,12 @@
+name: Stub Generate Preview
+on:
+  workflow_dispatch:
+
+jobs:
+  push-scratch:
+    name: Stub push scratch docs
+    runs-on: silabs-internal  # or silabs-internal if you must test that runner
+    timeout-minutes: 5
+    steps:
+      - name: Stub
+        run: echo "stub ok"
