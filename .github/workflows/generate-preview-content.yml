@@ -6,7 +6,7 @@ on:
 jobs:
   push-scratch:
     name: Stub push scratch docs
-    runs-on: silabs-internal  # or silabs-internal if you must test that runner
+    runs-on: ubuntu-latest  # or silabs-internal if you must test that runner
     timeout-minutes: 5
     steps:
       - name: Stub
