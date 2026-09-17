@@ -1,13 +1,20 @@
-name: Stub Generate Preview
+name: Generate Preview Content
 on:
   push:
   workflow_dispatch:
 
 jobs:
-  push-scratch:
-    name: Stub push scratch docs
-    runs-on: ubuntu-latest  # or silabs-internal if you must test that runner
-    timeout-minutes: 5
+  upload-preview:
+    name: Upload bluetooth preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Stub
-        run: echo "stub ok"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload bluetooth preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bluetooth
+          path: output/bluetooth
+          if-no-files-found: error
