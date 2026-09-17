@@ -1,5 +1,6 @@
 name: Stub Generate Preview
 on:
+  push:
   workflow_dispatch:
 
 jobs:
