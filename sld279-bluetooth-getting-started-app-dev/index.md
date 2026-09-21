@@ -26,7 +26,7 @@ An indicator at the top of the dialog shows you where you are.
 
 ![Breadcrumbs](resources/sld279-image33.png?darkModeUrl=resources/sld279-image33.png)
 
-You can start a project from different locations in the Launcher Perspective, as described in the [Simplicity Studio 5 User's Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/). While you are getting started, we suggest starting from the File menu, as that takes you through all three of the above dialogs.
+You can start a project from different locations in the Launcher Perspective, as described in the [latest version of Simplicity Studio User's Guide](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/). While you are getting started, we suggest starting from the File menu, as that takes you through all three of the above dialogs.
 
 1. Select **New \>\> Silicon Labs Project Wizard**.
 
@@ -134,7 +134,7 @@ Characteristics are generally complex structures of fields. If you want to know 
 
 ### The Pin Tool
 
-Simplicity Studio 5 offers a Pin Tool that allows you to easily configure new peripherals or change the properties of existing ones. In the Project Configurator SOFTWARE COMPONENTS tab, expand the Advanced Configurators group and open the Pin Tool. The graphical view differs based on the chip.
+Simplicity Studio offers a Pin Tool that allows you to easily configure new peripherals or change the properties of existing ones. In the Project Configurator SOFTWARE COMPONENTS tab, expand the Advanced Configurators group and open the Pin Tool. The graphical view differs based on the chip.
 
 ![The pin tool view 1](resources/pintool-start.png?darkModeUrl=resources/pintool-start.png)
 
@@ -142,7 +142,7 @@ The pin, function, and peripheral tabs in the configuration pane provide differe
 
 Use the Pin Tool to modify the pin configuration of the device. Software components control behavior in the project but must be associated with a peripheral, and generally need pin or function assignments. These pin or function assignments are most easily edited in the Component Editor for that component. The Pin Tool allows you to assign functions to pins. On all three dialogs, click **EDIT** next to a software component to go directly to the Component Editor for that component. Click **NEW** to go to the Project Configurator's SOFTWARE COMPONENTS tab, where you can install a component in the project so that it can be selected in the dialog.
 
- For more information see the [Simplicity Studio 5 User's Guide Pin Tool section](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-developing-with-project-configurator/pin-tool).
+ For more information see the [Simplicity Studio User's Guide Pin Tool section](https://docs.silabs.com/ssv6ug/latest/studio-pin-tool/).
 
 ### Multi-Node Energy Profiler
 
@@ -168,7 +168,7 @@ Multi-node Energy Profiler is also able to simultaneously measure the consumptio
 
 ![Interactions with the Energy Profiler](resources/sld279-image47.png?darkModeUrl=resources/sld279-image47.png)
 
-To learn more about how to use this tool, see the [Simplicity Studio 5 User's Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/).
+To learn more about how to use this tool, see the [Simplicity Studio User's Guide](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/).
 
 ### Network Analyzer
 
@@ -194,7 +194,7 @@ The Bluetooth NCP Commander application can be used to test and evaluate Bluetoo
 
 Bluetooth NCP Commander is also available as a standalone application, located in:
 
-`C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\ncp_commander`
+`C:\SiliconLabs\SimplicityStudio\v6\developer\adapter_packs\ncp_commander`
 
 To find the standalone version on MAC, find Simplicity Studio, right-click and select Show Package Content. The NCP commander can be found under:
 

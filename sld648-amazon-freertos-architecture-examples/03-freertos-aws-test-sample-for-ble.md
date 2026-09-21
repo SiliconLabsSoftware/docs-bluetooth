@@ -32,7 +32,7 @@ The following is needed to run Bluetooth LE tests:
 - A micro-SD card and SD card adapter for the Raspberry Pi software
 - A PC with
 
-  - Simplicity Studio 5 (installers are available on [https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads](https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads)) and/or SLC-CLI (for Linux and Mac)
+  - Latest version of Simplicity Studio (installers are available on [https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads](https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads)) and/or SLC-CLI (for Linux and Mac)
 
   - GSDK 4.1.2 or later
 

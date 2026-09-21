@@ -14,7 +14,7 @@ $GSDK_PATH\protocol\bluetooth\bin\gatt\bgbuild.py
 
 $GSDK_PATH is the installation directory of the selected GSDK, for example ~/SimplicityStudio/SDKs/gecko_sdk/.
 
-The script requires installing Python 3 and the Jinja2 package by calling `pip install jinja2`. The script can parse only GATT configurations created with Simplicity Studio 5 / SDK v4.x, or written manually according to this user guide. The GATT Configurator can import older gatt.xml formats.
+The script requires installing Python 3 and the Jinja2 package by calling `pip install jinja2`. The script can parse only GATT configurations created with latest version of Simplicity Studio / SDK v4.x, or written manually according to this user guide. The GATT Configurator can import older gatt.xml formats.
 
 Mandatory argument:
 
@@ -24,7 +24,7 @@ Optional arguments:
 
 - -h, --help: display help message
 
-- -o OUTDIR, --outdir OUTDIR: the output directory, where the files will be generated (Simplicity Studio 5 generates the sources into the autogen folder. Generating them somewhere else in the project structure could cause potential collisions.)
+- -o OUTDIR, --outdir OUTDIR: the output directory, where the files will be generated (Simplicity Studio generates the sources into the autogen folder. Generating them somewhere else in the project structure could cause potential collisions.)
 
 ```C
 python $GSDK_PATH/protocol/bluetooth/bin/gatt/bgbuild.py

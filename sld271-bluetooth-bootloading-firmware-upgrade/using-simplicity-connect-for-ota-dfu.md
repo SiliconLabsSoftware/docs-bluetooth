@@ -13,7 +13,7 @@ For tutorial purposes, the `Bluetooth - SoC Empty` SDK example application will 
 ### Requirements
 
 - Wireless Starter Kit and Bluetooth-capable radio board
-- Simplicity Studio 5
+- Latest version of Simplicity Studio
 - Android or iOS mobile device
 
 ## First Steps

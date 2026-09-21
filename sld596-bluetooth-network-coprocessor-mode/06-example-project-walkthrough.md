@@ -4,7 +4,7 @@ This page describes the structure of the example NCP Host and Target projects, a
 
 ## NCP Target
 
-This section focuses on the NCP-specific part of the **Bluetooth - NCP** SSv5 project. You can find a general project description in [Silicon Labs Bluetooth C Application Developers Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-c-soc-dev-guide-sdk-v9x/).
+This section focuses on the NCP-specific part of the **Bluetooth - NCP** SSv6 project. You can find a general project description in [Silicon Labs Bluetooth C Application Developers Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-c-soc-dev-guide-sdk-v9x/).
 
 The **Bluetooth - NCP** example does not contain a GATT database. The dynamic GATT API can be used for building it. This is recommended because the target code does not need to be modified and synchronized with the Host code when the GATT database is updated.
 
@@ -161,7 +161,7 @@ The remote wake-lock (direction: out) functionality can be used to wake up the h
 
 The PC host application project that comes with the SDK is written in C. The host-side source files for this project are found in folders, for GSDK 3.x:
 
-*c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\\<version\>\app\bluetooth\example_host\empty\*
+*c:\SiliconLabs\SimplicityStudio\v6\developer\sdks\gecko_sdk_suite\\<version\>\app\bluetooth\example_host\empty\*
 
 or, for GSDK 4.0 and higher:
 
@@ -179,11 +179,11 @@ While the files in the previous section contain all of the application logic, th
 
 Default location in GSDK 3.x, where \<version> will vary by SDK version:
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\inc\sl_bt_ncp_host.h`
+- `c:\SiliconLabs\SimplicityStudio\v6\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\inc\sl_bt_ncp_host.h`
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host.c`
+- `c:\SiliconLabs\SimplicityStudio\v6\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host.c`
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host_api.c`
+- `c:\SiliconLabs\SimplicityStudio\v6\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host_api.c`
 
 Default location in GSDK 4.0 and higher:
 
