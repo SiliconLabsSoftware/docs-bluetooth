@@ -17,7 +17,7 @@ To run an example system, the following items are needed:
 - Smartphone with Android or iOS
 - A computer running Windows, MacOS, or Linux with:
 
-  - Simplicity Studio 5 installed (installers are available on [https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads](https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads))
+  - Latest version of Simplicity Studio installed (installers are available on [https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads](https://www.silabs.com/developer-tools/simplicity-software-development-kit?tab=downloads))
 
   - GSDK 4.1.2 or later with the Bluetooth SDK installed through Simplicity Studio
 
@@ -29,7 +29,7 @@ To run an example system, the following items are needed:
 
    ![Power switch in AEM position](resources/sld648-power-switch-aem-position.png)
 
-3. With your development kit connected, Install Simplicity Studio and the GSDK following the instructions in the **Getting Started** section of the [Simplicity Studio 5 User’s Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-getting-started/install-ss-5-and-software).
+3. With your development kit connected, Install Simplicity Studio and the GSDK following the instructions in the **Getting Started** section of the [Simplicity Studio User’s Guide](https://docs.silabs.com/ssv6ug/latest/install-ssv6/install-simplicity-studio).
 
 4. Once installation is complete, the development kit parts are displayed in the Simplicity Studio Debug Adapters view. Click the device to select it.
 
@@ -183,7 +183,7 @@ Using the IDE and the SDK, you can build the application and run it on your phon
 
 ## Create the Embedded Application
 
-If you are not familiar with developing applications in Simplicity Studio 5, you can find more background in both the [Simplicity Studio 5 User's Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-overview/) and the [Bluetooth SDK Getting Started Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-getting-started-overview/).
+If you are not familiar with developing applications in Simplicity Studio, you can find more background in both the [Simplicity Studio 5 User's Guide](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/) and the [Bluetooth SDK Getting Started Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-getting-started-overview/).
 
 ### Create the Project
 

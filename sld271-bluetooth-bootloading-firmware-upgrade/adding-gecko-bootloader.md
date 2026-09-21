@@ -19,7 +19,7 @@ Although some devices are shipped with preprogrammed bootloaders, it is always r
 
 2. Flash your Bluetooth application (.s37 or .hex or .bin) to the device.
 
-3. Create a new Gecko Bootloader project, e.g., Bluetooth in-place OTA DFU Bootloader or BGAPI UART DFU Bootloader. You can find these example projects after selecting your device under the Example Projects & Demos tab of the Launcher view of Simplicity Studio 5.
+3. Create a new Gecko Bootloader project, e.g., Bluetooth in-place OTA DFU Bootloader or BGAPI UART DFU Bootloader. You can find these example projects after selecting your device under the Example Projects & Demos tab of the Launcher view of Simplicity Studio.
 
 4. Generate and build it.
 

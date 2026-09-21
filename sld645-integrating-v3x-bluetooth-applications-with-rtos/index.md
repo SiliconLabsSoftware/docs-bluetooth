@@ -20,7 +20,7 @@ You should have:
 - A working knowledge of Bluetooth Low Energy communications.
 - A Wireless starter kit with an EFR32BG or EFR32MG radio board
 - Installed and be familiar with using the following:
-  - Simplicity Studio 5
+  - Latest version of Simplicity Studio
   - IAR Embedded Workbench for ARM (IAR-EWARM) (optional - only use the version that is compatible with the SDK version, as listed in the SDK release notes). May be used as a compiler in the Simplicity Studio development environment as an alternative to GCC (The GNU Compiler Collection), which is provided with Simplicity Studio. Again, use only the GCC version that is compatible with the SDK version, as listed in the SDK release notes.
   - Bluetooth SDK v3.1.0 or above
 

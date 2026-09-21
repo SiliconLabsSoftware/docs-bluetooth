@@ -17,7 +17,7 @@ The Bluetooth SDK comes with pre-built demos that can be directly flashed into t
 - SoC iBeacon
 - NCP Empty
 
-The iBeacon can be tested with Simplicity Connect as documented in [Getting Started with the WSTK](/bluetooth/{build-docspace-version}/bluetooth-getting-started-wstk). NCP Empty can be tested with NCP Commander, which can be launched via the Tools dialog in Simplicity Studio 5.
+The iBeacon can be tested with Simplicity Connect as documented in [Getting Started with the WSTK](/bluetooth/{build-docspace-version}/bluetooth-getting-started-wstk). NCP Empty can be tested with NCP Commander, which can be launched via the Tools dialog in the latest version of Simplicity Studio.
 
 ![NCP Commander](resources/ncp-commander.png?darkModeUrl=resources/ncp-commander.png)
 

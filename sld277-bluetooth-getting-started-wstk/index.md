@@ -1,6 +1,6 @@
 # Getting Started with the WSTK
 
-To get started with Bluetooth demo software, you should have downloaded Simplicity Studio 5 (SSv5) and the Bluetooth SDK v3.x as described in the [Simplicity Studio 5 User’s Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/), available online and through the SSv5 help menu. The Bluetooth SDK comes with some prebuilt demos that can be flashed to your EFR32 device and tested using a Smartphone. This section describes how to set up the WSTK and how to test three prebuilt demos on both Android and iOS devices:
+To get started with Bluetooth demo software, you should have downloaded latest version of Simplicity Studio and the Bluetooth SDK v3.x as described in the [Simplicity Studio User’s Guide](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/), available online and through the Simplicity Studio help menu. The Bluetooth SDK comes with some prebuilt demos that can be flashed to your EFR32 device and tested using a Smartphone. This section describes how to set up the WSTK and how to test three prebuilt demos on both Android and iOS devices:
 
 - NCP Empty demo
 - iBeacon demo
@@ -27,7 +27,7 @@ Before starting to test the demo application note the following parts on the mai
 
 ## Flash the Demo
 
-- With your device connected as described above, open Simplicity Studio v5.
+- With your device connected as described above, open the latest version of Simplicity Studio.
 - Select your device in the **Debug Adapters** view.
 - On the **Example Projects & Demos** tab, click **RUN** on the demo of choice.
 

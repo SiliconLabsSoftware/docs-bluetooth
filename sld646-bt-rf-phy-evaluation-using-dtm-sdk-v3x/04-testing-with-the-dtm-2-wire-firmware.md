@@ -2,15 +2,15 @@
 
 If a Bluetooth tester device is available, it should be used to evaluate the RF performance of the DUT, since such dedicated equipment is faster and offers automated and accurate testing. These benefits among others are achieved because the tester can control and configure the DUT in all the tests required for complete RF PHY evaluation. Such control is possible thanks to the DTM 2-wire capability and its related protocol, which are part of the Bluetooth specification.
 
-To enable the DTM 2-wire communication between a commercial Bluetooth tester device (that is, the Upper Tester with the included RF PHY measurement capability) and the DUT, the latter needs to run a special firmware where the protocol is included. This special DTM 2-wire-capable firmware is available as an example application project in Bluetooth SDK v3x through Simplicity Studio® 5 (SSv5). This section provides a summary of the project creation and use process. It assumes you are familiar with building and flashing applications using the Bluetooth SDK v3.x with SSv5. For more information about these processes, see the online SSv5 User's Guide, available through the SSv5 help menu, or [Getting Started with Silicon Labs Bluetooth LE Development](https://docs.silabs.com/bluetooth/latest/bluetooth-getting-started-overview/).
+To enable the DTM 2-wire communication between a commercial Bluetooth tester device (that is, the Upper Tester with the included RF PHY measurement capability) and the DUT, the latter needs to run a special firmware where the protocol is included. This special DTM 2-wire-capable firmware is available as an example application project in Bluetooth SDK v3x through the latest version of Simplicity Studio®. This section provides a summary of the project creation and use process. It assumes you are familiar with building and flashing applications using the Bluetooth SDK v3.x with SSv6. For more information about these processes, see the online Simplicity Studio User's Guide, available through the SSv6 help menu, or [Getting Started with Silicon Labs Bluetooth LE Development](https://docs.silabs.com/bluetooth/latest/bluetooth-getting-started-overview/).
 
-To create the project in SSv5, in the Launcher perspective, select the correct DUT in the Debug Adapter view. This correctly prepopulates the Target Board and Target Device (SoC or module) settings. In the **File** menu, select **New > Simplicity Studio Project Wizard**. The **Target, SDK and Toolchain Selection** dialog opens. Verify the target hardware, SDK version, and toolchain are correct. Click **NEXT**.
+To create the project in Simplicity Studio, in the Launcher perspective, select the correct DUT in the Debug Adapter view. This correctly prepopulates the Target Board and Target Device (SoC or module) settings. In the **File** menu, select **New > Simplicity Studio Project Wizard**. The **Target, SDK and Toolchain Selection** dialog opens. Verify the target hardware, SDK version, and toolchain are correct. Click **NEXT**.
 
-![Simplicity Studio 5 Target, SDK and Toolchain Selection Dialog](resources/simplicity-studio-5-target-sdk-and-toolchain-selection-dialog.png)
+![Simplicity Studio Target, SDK and Toolchain Selection Dialog](resources/simplicity-studio-5-target-sdk-and-toolchain-selection-dialog.png)
 
 The Example Project Selection dialog opens. Use the Technology Type and Keyword filters to search for a specific example, in this case **Bluetooth - SoC DTM**. Select it and click **NEXT**.
 
-![Simplicity Studio 5 Example Project Selection Dialog](resources/simplicity-studio-5-example-project-selection-dialog.png)
+![Simplicity Studio Example Project Selection Dialog](resources/simplicity-studio-5-example-project-selection-dialog.png)
 
 The Project Configuration dialog opens. You do not need to change any of the default values. Click **FINISH** to create the DTM example project.
 
