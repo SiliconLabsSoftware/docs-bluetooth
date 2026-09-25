@@ -12,34 +12,42 @@ By default, the NCP target boots without using this encryption. It will be reque
 
 ## Host Side
 
-To build the NCP Host project with secure mode, use the following command:
+1. Create a new **Bluetooth - Host Empty** project in Simplicity Studio 6
 
-```C
-make SECURITY=1
-```
+    ![studio6 host app generation](resources/an1259-studio6-host-app-generation.png)
 
-This requires the openssl package to be installed. Install it to your MSYS2 environment with:
+2. At the *Target Device* select the option *Part* and the desired OS
+    ![studio6 select os](resources/an1259-studio6-select-os.png)
+
+3. Add `Secure NCP communication layer for host projects` component to the project
+4. Secure mode requires the openssl package to be installed. It can be installed to the MSYS2 environment if necessary with:
 
 ```C
 pacman -S mingw-w64-x86_64-openssl
 ```
 
-After the project is built, the encryption can be enabled by calling the .exe file with the command line parameter `-s`:
+5. Build the project in MSYS2 MinGW 64-bit
+    ```C
+    make -f bt_host_empty.Makefile
+    ```
+6. The build output is created in a new *build/debug/* folder. After the project is built, the encryption can be enabled by calling the .exe file with the command line parameter `-s`:
 
 ```C
-.\empty.exe -s
+.\bt_host_empty.exe -s
 ```
 
 ```C
-$ ./empty.exe -u COM21 -s
+$ ./build/debug/bt_host_empty.exe -u COM<*> -s
+[D] Timer function intialized
 [I] NCP host initialised.
-[I] Resetting NCP target...
-[I] Press Ctrl+C to quit
-[I] Start encryption
+[I] Press Crtl+C to quit
+
+[I] Rebooting NCP target (0)...
+[I] Start encryption using OpenSSL 3.0
 [I] Communication encrypted
-[I] Bluetooth stack booted: v3.2.1-b216
-[I] Bluetooth public device address: 00:0B:57:A7:84:15
+[I] Bluetooth stack booted: v11.0.1+0e13429e
+[I] Bluetooth public device address: 04:87:27:E7:07:5D
 [I] Started advertising.
 ```
 
-Running the exe file without this option will start a normal NCP Host application without encryption.
+Running the exe file without `-s` parameter will start a normal NCP Host application without encryption.

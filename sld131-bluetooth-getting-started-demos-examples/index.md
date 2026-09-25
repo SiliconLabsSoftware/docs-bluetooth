@@ -90,25 +90,31 @@ See [Dynamic Multiprotocol Development with Bluetooth and Proprietary Protocols 
 
 ### NCP Host Examples
 
-NCP host examples are located in \<GSDK-install-location>\app\bluetooth\example_host.
+NCP host examples are located in \<SiSDK-install-location>\bluetooth_le_app\example_host.
+
+- **bt\_aoa\_host\_locator:** A locator host sample app that works together with a **Bluetooth AoA – NCP Locator** target app. It receives IQ samples from the target and estimates the Angle of Arrival (AoA). For more information see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
+
+- **bt\_cs\_host:** This is the host application for the Channel Sounding (CS) NCP target application.
+
+- **bt\_host\_cpc\_hci\_bridge:** A background application to be run when HCI interface is exposed via CPC. This application retrieves the HCI commands/events from the CPC messages and forwards them toward the Bluetooth host running on the PC. Similarly, it forwards the HCI commands from the host toward the target over CPC.
 
 - **bt\_host\_empty:** Minimal host-side project structure, used as a starting point for NCP host applications. Use it with the **Bluetooth – NCP** target application flashed to the radio board.
 
+- **bt\_host\_esl\_ap:** This Python example implements the functionality of an Access Point as specified by the Bluetooth Electronic Shelf Label Profile specification using an NCP ESL AP target.
+
+- **bt\_host\_ncp\_test:** This Network Co-Processor (NCP) host application serves 2 purposes. It demonstrates (1) how to use user NCP commands and (2) how to implement a simple application to test NCP performance using the default user commands.
+
 - **bt\_host\_ota\_dfu:** Demonstrates how to perform an OTA DFU on a Silicon Labs Bluetooth Device. It requires a WSTK with a radio board flashed with NCP firmware to be used as the GATT client that performs the OTA.
+
+- **bt\_host\_positioning:** Connects to multiple **bt\_aoa\_host\_locator** sample apps (via MQTT) and estimates a position from Angles of Arrival (AoA). For more information, see *QS175: Application Development with Silicon Labs’ RTL Library.*
+
+- **bt\_host\_throughput:** Tests the throughput capabilities of the device in NCP mode and can be used to measure throughput between two devices as well as between a device and a smartphone.
 
 - **bt\_host\_uart\_dfu:** Demonstrates how to perform a UART DFU on a Silicon Labs Bluetooth Device running NCP firmware.
 
 - **bt\_host\_voice:** On a WSTK programmed with NCP firmware, it to connects to the **Bluetooth – SoC Voice** example, sets the correct configuration on it, receives audio via Bluetooth, and stores audio data into a file.
 
-- **bt\_aoa\_host\_locator:** A locator host sample app that works together with a **Bluetooth AoA – NCP Locator** target app. It receives IQ samples from the target and estimates the Angle of Arrival (AoA). For more information see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
-
-- **bt\_host\_positioning:** Connects to multiple **bt\_aoa\_host\_locator** sample apps (via MQTT) and estimates a position from Angles of Arrival (AoA). For more information, see *QS175: Application Development with Silicon Labs’ RTL Library.*
-
 - **bt\_host\_positioning\_gui:** Connects to the **bt\_host\_positioning** sample app (via MQTT), reads out the position estimations and displays the tags and locators on a 3D GUI. This sample app is python based. For more information, see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
-
-- **bt\_host\_throughput:** Tests the throughput capabilities of the device in NCP mode and can be used to measure throughput between two devices as well as between a device and a smartphone.
-
-- **bt\_host\_cpc\_hci\_bridge:** A background application to be run when HCI interface is exposed via CPC. This application retrieves the HCI commands/events from the CPC messages and forwards them toward the Bluetooth host running on the PC. Similarly, it forwards the HCI commands from the host toward the target over CPC.
 
 ## Code Examples
 

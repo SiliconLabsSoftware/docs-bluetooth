@@ -8,13 +8,9 @@ Bluetooth NCP Commander is an easy-to-use tool that can be used for testing diff
 
 ### Built-in Version
 
-1. To open the built-in Bluetooth NCP Commander, select the target board in the **Debug Adapters** view, and check that the preferred SDK is set to **Gecko SDK Suite vn.n.n**. Select the **Compatible Tools** tab, and click **Launch** next to Bluetooth NCP Commander.
+1. To open the built-in Bluetooth NCP Commander, select **Tools** tab on the left side, browse **Bluetooth NCP Commander** and click **Open Tool**.
 
-   ![Compatible Tools](resources/an1259-v14-tools-tab.png)
-
-   Alternatively, you can open the built-in Bluetooth NCP Commander from the **Tools** menu.
-
-   ![Tools dialog](resources/an1259-v14-tools-menu.png)
+![Compatible Tools](resources/an1259-launch-Bluetooth-NCP-Commander.png)
 
 2. Select the target device, and click **Connect**.
 
@@ -22,7 +18,7 @@ Bluetooth NCP Commander is an easy-to-use tool that can be used for testing diff
 
 ### Standalone Version
 
-1. To open the standalone tool, navigate to *C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\ncp_commander*, and start NcpCommander.exe.
+1. To open the standalone tool, navigate to *C:\Users\\\<user>\\.silabs\slt\installs\archive\ncpcommander-vx.y.z*, and start NcpCommander.exe.
 
 2. In the standalone tool, provide the UART interface settings, and then select the COM port on which the device can be accessed.
 
@@ -166,7 +162,7 @@ In **Settings**, if the **Reset Mesh Node before Initializing as Provisioner** o
 
 ## Building the NCP Host Examples on Windows
 
-The Silicon Labs v3.x Bluetooth SDK contains a generic NCP Host example project for the PC. This example can be compiled on Windows or any POSIX OS. This section goes through the build process on Windows.
+Simplicity Studio SDK contains NCP Host example projects for PC. These examples can be compiled on Windows or any POSIX OS. This section goes through the build process on Windows.
 
 >**Note**: The host example projects in the SDK use the dynamic GATT database feature. They are to be used with the **Bluetooth – NCP** target application.
 
@@ -184,39 +180,36 @@ The Silicon Labs v3.x Bluetooth SDK contains a generic NCP Host example project 
 
     ![msys2 mingw 64-bit](resources/an1259-msys2-mingw-64-bit.png)
 
-5. Change to the NCP Host example folder, where \<version> varies by SDK version:
+5. Create a new **Bluetooth - Host Empty** project in Simplicity Studio 6
 
+    ![studio6 host app generation](resources/an1259-studio6-host-app-generation.png)
+    
+6. At the Target Device select the option **Part** and **WIN32**
+    ![studio6 select os](resources/an1259-studio6-select-os.png)
+
+7. Navigate to the project folder in MSYS2 MinGW 64-bit.
+
+8. Build the project in MSYS2 MinGW 64-bit
     ```C
-    cd c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\v3.x\app\bluetooth\example_host\bt_host_empty\
+    make -f bt_host_empty.Makefile
     ```
+9. The build output is created in a new *build/debug/* folder. Navigate to this folder, and then run`bt_host_empty.exe` with the interface as an argument.
 
-    or
+10. Once the UART connection with the device is established, the following should appear:
 
-    ```C
-    cd c:\Users\<username>\SimplicityStudio\SDKs\gecko_sdk\app
-    ```
+``` 
+    MINGW64 ~/SimplicityStudio/v6_workspace_2226/bt_host_empty
+    $ ./build/debug/bt_host_empty.exe -u COM30
+    [D] Timer function intialized
+    [I] NCP host initialised.
+    [I] Press Crtl+C to quit
 
-6. Create an export of the example with the command `make export`. After the project files are exported, the export directory will be a working directory that is completely detached from the SDK but has the same folder structure inside. The benefit of using an export is that changes in the (config) files during development will not affect the SDK content, and multiple instances can coexist, for example for testing different variants. You can also use `make export EXPORT_DIR=/my/custom/export/path` to export the example to a custom directory.
-
-7. Within the export folder navigate to the */app/bluetooth/example_host/bt_host_empty* folder.
-
-8. If you want to add any service/characteristic to the GATT database, edit the */config/btconf/gatt_configuration.btconf* file. Edit it either with a text editor or drag-and-drop the file onto Simplicity Studio to edit it with the GATT Configurator. Do not forget to save the file after editing.
-
-9. Generate GATT database source files from the .*btconf* file by running `make gattdb` (in the */bt_host_empty* folder). Note: The generator script requires installing Python 3 and the Jinja2 package by calling `pip install jinja2`.
-
-10. Build the exported project with the command: `make`. (Run it in the */bt_host_empty* folder, where you can find the makefile).
-
-11. The build output is created in a new *exe* folder. Go to this folder with `cd exe`, and then run`bt_host_empty.exe`. The COM port and the IP address of the target are passed as command line parameters. The COM port should be the same as the one used by the JLink CDC UART Port, as shown in [NCP Host Development](./03-ncp-host-development). To see how to pass the different parameters, first run the exe with the `-h` (help) switch.
-
-    ```C
-    .\bt_host_empty.exe -h
-    ```
-
-12. Once the UART connection with the device is established, you should see the following:
-
-    ![started advertising message](resources/an1259-figure-3-6.png)
-
-13. Now you can connect to the device over Bluetooth.
+    [I] Rebooting NCP target (0)...
+    [I] Bluetooth stack booted: v11.0.1+0e13429e
+    [I] Bluetooth public device address: 04:87:27:E7:07:5D
+    [I] Started advertising.
+```
+10. The device advertises and ready for Bluetooth connection.
 
 ## Using Python for Host Side Development
 

@@ -4,7 +4,7 @@
 
 The purpose of the Co-Processor Communication (CPC) Protocol is to act as a serial link multiplexer that allows data sent from multiple applications to be transported over a secure shared physical link. In CPC, data transfers between processors are segmented in sequential packets over endpoints. Transfers are guaranteed to be error-free and sent in order.
 
-Find more information about the CPC at [https://docs.silabs.com/gecko-platform/4.1/service/cpc/overview](https://docs.silabs.com/gecko-platform/4.1/service/cpc/overview).
+Find more information about the CPC at [https://docs.silabs.com/gecko-platform/latest/platform-cpc-overview/](https://docs.silabs.com/gecko-platform/latest/platform-cpc-overview/).
 
 ## Usage
 
@@ -12,7 +12,9 @@ The CPC daemon acts as a bridge between the host and the target application. It 
 
 ![CPC daemon](resources/an1259-cpc-daemon.png)
 
-The NCP host by default does not contain usage of CPC. You need to build the application with the command line option `CPC=1`.
+The NCP host by default does not contain usage of CPC. You need to build the application with **Host NCP CPC adapter (Linux only)** component.
+
+>**Note**: The Host NCP CPC adapter (Linux only) component is Experimental currently. 
 
 ## Use Cases
 
@@ -24,7 +26,13 @@ Adding the CPC functionality is recommended for the following use cases, as they
 
 ## Building the Target
 
-To make the target use CPC communication, replace the USART component in the **bt_ncp** sample application with **CPC Secondary - UART (USART)** or **CPC Secondary – SPI (USART)**. This adds all the necessary components to enable CPC communication on the target. Set the pins of the selected communication interface according to the hardware design of the project.
+To make the target use CPC communication, replace the USART component in the **bt_ncp** sample application with **CPC Secondary - UART (USART)** or **CPC Secondary – SPI (USART)**. This adds the necessary components to enable CPC communication on the target. Set the pins of the selected communication interface according to the hardware design of the project.
+
+In NCP setup **Bluetooth NCP Transport over CPC** component is required.
+
+>**Note**: The Bluetooth NCP Transport over CPC component is Experimental currently. 
+    
+![Add Target NCP CPC](resources/Studio6-target-app-CPC.png)
 
 The encryption of the communication is enabled by default. For developing and debugging, Silicon Labs recommends adding the **CPC SECURITY NONE** component so that the packet traces can be easier analyzed.
 
@@ -44,9 +52,20 @@ If the **CPC SECURITY NONE** component was added to the target, set **disable_en
 
 ### Step 2: Build the host application
 
-Find the *ncp_host_bt.mk* file in the \<SDK folder>/app/Bluetooth/component_host/ folder, and set `CPC_DIR` to the path of the CPC daemon folder on your machine.
+1. Create a new **Bluetooth - Host empty** project in Simplicity Studio 6
+    ![studio6 host app generation](resources/an1259-studio6-host-app-generation.png)
 
-Next, go to the **bt_host_empty** sample application in \<SDK folder>/app/Bluetooth/example_host/bt_host_empty, and build it with this command line option to enable CPC: `make CPC=1`.
+2. At the *Target Device* select the option *Part* and *Linux*
+    ![studio6 select os](resources/an1259-studio6-select-os.png)
+
+3. Add *Host NCP CPC adapter (Linux only)* component
+    ![Add Host NCP CPC](resources/Studio6-host-app-CPC.png)
+>**Note**: The Host NCP CPC adapter (Linux only) component is Experimental currently. 
+4. Build the project
+    ```C
+    make -f bt_host_empty.Makefile
+    ```
+5. The build output is created in a new *build/debug/* folder.
 
 ### Step 3: Run the application
 

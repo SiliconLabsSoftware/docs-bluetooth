@@ -4,13 +4,13 @@ This page describes the structure of the example NCP Host and Target projects, a
 
 ## NCP Target
 
-This section focuses on the NCP-specific part of the **Bluetooth - NCP** SSv5 project. You can find a general project description in [Silicon Labs Bluetooth C Application Developers Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-c-soc-dev-guide-sdk-v9x/).
+This section focuses on the NCP-specific part of the **Bluetooth - NCP** SSv6 project. You can find a general project description in [Silicon Labs Bluetooth C Application Developers Guide](https://docs.silabs.com/bluetooth/latest/bluetooth-c-soc-dev-guide-sdk-v9x/).
 
 The **Bluetooth - NCP** example does not contain a GATT database. The dynamic GATT API can be used for building it. This is recommended because the target code does not need to be modified and synchronized with the Host code when the GATT database is updated.
 
 ### Project File Structure
 
-A common directory and file structure are used across all examples in the Bluetooth SDK v3.x. The following figure shows this layout.
+A common directory and file structure are used across the examples in the Bluetooth SDK. The following figure shows this layout.
 
 ![project file structure](resources/an1259-v10-bt-ncp-project.png)
 
@@ -24,9 +24,7 @@ These files and directories are present in the root directory of the project:
 
 - *bt_ncp.slps* – the project properties XML file
 
-- *GNU ARM v\<X.Y.Z>* – the build directory
-
-- *gecko.sdk_3.\<X.Y>* – the Bluetooth SDK source code
+- *simplicity_sdk_.\<X.Y>* – the Bluetooth SDK source code
 
 - *config* – the C configuration files of the hardware and Bluetooth stack. This directory contains the output files of the Pin Tool and Component Manager.
 
@@ -111,9 +109,9 @@ This is a code snippet that corresponds to the `main` function. Because the Blue
 
 ![code snippet of main function](resources/an1259-figure-4-8.png)
 
-Once the USART and Bluetooth stack are initialized, the main loop continuously calls the component as well as the application state machine. The corresponding functions are `sl_system_process_action()` and `app_process_action()` respectively.
+Once the USART and Bluetooth stack are initialized, the main loop continuously calls the component as well as the application state machine. The corresponding functions are `sl_main_process_action()` and `app_process_action()` respectively.
 
-The `sl_system_process_action()` handles Silicon Labs tasks and routines. It must *not be removed* from the loop.
+The `sl_main_process_action()` handles Silicon Labs tasks and routines. It must *not be removed* from the loop.
 
 The default USART settings are mentioned in the Host example section. Make sure that the target and the host use the same configuration. The configuration can be adapted with the help of the Pin Tool and the Project Configurator.
 
@@ -159,39 +157,22 @@ The remote wake-lock (direction: out) functionality can be used to wake up the h
 
 ## PC Host
 
-The PC host application project that comes with the SDK is written in C. The host-side source files for this project are found in folders, for GSDK 3.x:
+The PC host application project that comes with the SDK is written in C. The host-side source files for this project are copied / linked after a host project is generated from Simplicity Studio 6.
 
-*c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\\<version\>\app\bluetooth\example_host\empty\*
-
-or, for GSDK 4.0 and higher:
-
-*c:\Users\\<username\>\SimplicityStudio\gecko_sdk\app\bluetooth\example_host*
-
-The projects comprise only a few source and header files. Note, however, that many other files are referenced from the SDK in the makefile. For example, many utility functions are implemented under:
-
-*\<SDK folder>\app\bluetooth\common_host\*
-
-but the Bluetooth protocol folder is also heavily used as described later. To copy all the files related to the project into a single folder, take advantage of the export feature described in [Host Side](./04-secure-ncp.md#host-side).
+The projects comprise only a few source and header files. Note, however, that many other files are referenced from the SDK in the makefile.
+For further details about the host side application please refer to [Host Side build](./04-secure-ncp.md#host-side).
 
 ### BGAPI Support Files
 
 While the files in the previous section contain all of the application logic, the actual BGLib implementation code containing the BGAPI parser and packet generation functions is found elsewhere, in other subfolders.
 
-Default location in GSDK 3.x, where \<version> will vary by SDK version:
+Default location for SiSDK 2025.12.x and above:
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\inc\sl_bt_ncp_host.h`
+- `C:\Users\<NAME>\.silabs\slt\installs\conan\p\<SDK identifier>\p\protocol\bluetooth\inc\sl_bt_ncp_host.h`
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host.c`
+- `C:\Users\<NAME>\.silabs\slt\installs\conan\p\<SDK identifier>\p\protocol\bluetooth\src\sl_bt_ncp_host.c`
 
-- `c:\SiliconLabs\SimplicityStudio\v5\developer\sdks\gecko_sdk_suite\<version>\protocol\bluetooth\src\sl_bt_ncp_host_api.c`
-
-Default location in GSDK 4.0 and higher:
-
-- `c:\Users\<NAME>\SimplicityStudio\SDKs\gecko_sdk\protocol\bluetooth\inc\sl_bt_ncp_host.h`
-
-- `c:\Users\<NAME>\SimplicityStudio\SDKs\gecko_sdk\protocol\bluetooth\src\sl_bt_ncp_host.c`
-
-- `c:\Users\<NAME>\SimplicityStudio\SDKs\gecko_sdk\protocol\bluetooth\src\sl_bt_ncp_host_api.c`
+- `C:\Users\<NAME>\.silabs\slt\installs\conan\p\<SDK identifier>\p\protocol\bluetooth\src\sl_bt_ncp_host_api.c`
 
 The SDK’s specific arrangement of files is one possible way the BGAPI protocol can be used, but it is also possible to create your own library code that implements the protocol correctly with a different code architecture. The only requirement here is that the chosen implementation must be able to create BGAPI command packets correctly and send them to the module over UART. Similarly, it must be able to receive BGAPI response and event packets over UART and process them into whatever function calls are needed to trigger the desired application behavior.
 
@@ -251,15 +232,19 @@ The *sl_bt_ncp_host.c* file contains the implementation of the packet management
 
     ```C
     // Poll Bluetooth stack for an event and call event handler
-    static void sl_bt_step(void)
+    void sl_bt_step(void)
     {
-      sl_bt_msg_t evt;
-      // Pop (non-blocking) a Bluetooth stack event from event queue.
-      sl_status_t status = sl_bt_pop_event(&evt);
-      if (status != SL_STATUS_OK) {
-        return;
-      }
-      sl_bt_on_event(&evt);
+    sl_bt_msg_t evt;
+
+    // Run the Bluetooth host stack processing step
+    sl_bt_run();
+
+    // Check the length of the next event, if any, and verify that the application
+    // can process it. To prevent data loss, the event will be kept in the stack's
+    // queue if the application cannot process it at the moment.
+    size_t event_len = sli_bgapi_device_peek_event_len(&sli_bt_bgapi_device);
+    if ((event_len == 0) || (!sl_bt_can_process_event(event_len))) {
+      return;
     } 
     ```
 
