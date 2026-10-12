@@ -16,38 +16,53 @@ Although some devices are shipped with preprogrammed bootloaders, it is always r
 ### First Method
 
 1. Build your Bluetooth application.
-
 2. Flash your Bluetooth application (.s37 or .hex or .bin) to the device.
-
-3. Create a new Gecko Bootloader project, e.g., Bluetooth in-place OTA DFU Bootloader or BGAPI UART DFU Bootloader. You can find these example projects after selecting your device under the Example Projects & Demos tab of the Launcher view of Simplicity Studio 5.
-
-4. Generate and build it.
-
-5. For series 1 devices flash the .s37 file that ends with `–combined.s37` (e.g., `bootloader-uart-bgapi-combined.s37`). For series 2 devices flash the .s37 files that ends with `-crc.s37`.
-
-6. To flash a new version of the application, ensure that you use .hex or .s37 (or .gbl) format because the .bin format will overwrite the bootloader on some devices.
+3. Create a new Gecko Bootloader project.
+    - For NCP and RCP projects, use *NCP BGAPI UART DFU*
+    - For project using In-Place OTA DFU:
+        - On Series 1 devices or GSDK projects, use *SoC Bluetooth In-place OTA DFU*
+        - On Series 2 devices, use *SoC Bluetooth AppLoader OTA DFU*
+    - For project using Application OTA DFU:
+        - On Series 1 devices or GSDK projects, use *Internal Storage*
+        - On Series 2 devices, use *SoC Internal Storage*
+        - On Series 3 devices, use *SoC Storage*
+4. Generate and build the bootloader.
+5. Flash the bootloader image to the device:
+    - On Series 1 devices, flash the .s37 file ending with `-combined.s37`, which contains both first and second stage bootloaders.
+    - On Series 2 and 3 devices, flash the .s37 files ending with `-crc.s37`.
 
 ### Second Method
 
 1. Build your Bluetooth application.
-2. Create a new Gecko Bootloader project, e.g., Bluetooth in-place OTA DFU Bootloader or BGAPI UART DFU Bootloader. You can find these example projects after selecting your device under the Example Projects & Demos tab of the Launcher view of Simplicity Studio 5.
-3. Generate and build it.
+2. Create a new Gecko Bootloader project.
+    - For NCP and RCP projects, use *NCP BGAPI UART DFU*
+    - For project using In-Place OTA DFU:
+        - On Series 1 devices or GSDK projects, use *SoC Bluetooth In-place OTA DFU*
+        - On Series 2 devices, use *SoC Bluetooth AppLoader OTA DFU*
+    - For project using Application OTA DFU:
+        - On Series 1 devices or GSDK projects, use *Internal Storage*
+        - On Series 2 devices, use *SoC Internal Storage*
+        - On Series 3 devices, use *SoC Storage*
+3. Generate and build the bootloader.
 4. Copy the bootloader image (the one that ends with `-combined.s37` or `-crc.s37`) and the application image into the same folder.
-5. Merge the bootloader and the application image:
-
-    `commander convert bootloader-uart-bgapi-crc.s37 your_application.s37 -o app+bootloader.s37`
-
+5. Merge the bootloader and the application image: 
+    ```console
+    commander convert bootloader-uart-bgapi-crc.s37 your_application.s37 -o app+bootloader.s37
+    ```
 6. Flash the merged image to the device.
 
 ### Third Method
 
 1. Flash a demo to your device.
-
     - Flash the Bluetooth - SoC Thermometer demo to your device. This will flash the SoC Thermometer application with Bluetooth in-place OTA DFU type Gecko Bootloader.
     - **OR**: Flash the Bluetooth - NCP Empty demo to your device. This will flash the NCP Empty application with BGAPI UART DFU type Gecko Bootloader.
-
 2. Build your Bluetooth application.
+3. Flash the image to the device.
 
-3. Flash the .hex or the .s37 file to your device.
+### Important notes
 
-**Note**: commander.exe can be found here: C:\SiliconLabs\SimplicityStudio\vX\developer\adapter_packs\commander.
+- When flashing the application image, use the `.hex` or `.s37` output file. Flashing `.bin` files may overwrite or erase the bootloader.
+- commander.exe can be found here: 
+    - Studio v5: C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander
+    - Studio v6: C:\Users\\<USER_NAME>\\.silabs\slt\installs\archive\Simplicity Commander
+- Before flashing, verify the start and end addresses of the bootloader and application images to ensure that their flash regions do not overlap. An overlap may overwrite part of the bootloader or application and prevent the device from booting correctly.
