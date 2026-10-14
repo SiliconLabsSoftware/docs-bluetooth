@@ -49,7 +49,7 @@ The following diagram summarizes the procedure involving both the advertiser and
 
 ### Configuration
 
-The *max_advertisers* in the Bluetooth configuration structure also configures the maximum number of periodic advertisers. You can set the number of advertisers by opening the Bluetooth Core configurator tab from the Software Components:
+The *max_advertisers* in the Bluetooth configuration structure also configures the maximum number of periodic advertisers. To set the number of advertisers, open the Connection Configurator tab from Software Components:
 
 ![Bluetooth Core Configurator](resources/v3-add-adv.png?darkModeUrl=resources/v3-add-adv.png)
 
@@ -97,9 +97,9 @@ The command above can be used to set an advertisement data with a maximum length
 
 ### Configuration
 
-*max_periodic_sync* in the Bluetooth config configures the maximum number of synchronizations the Bluetooth stack needs to support. The value can be set in the Bluetooth Core configuration, as shown below:
+The *max_periodic_sync* setting in the Bluetooth configuration specifies the maximum number of synchronizations that the Bluetooth stack supports. To set this value, use the Periodic Advertising Synchronization configuration, as shown in the following figure:
 
-![configure maximum synchronizations](resources/v3-add-adv.png?darkModeUrl=resources/v3-add-adv.png)
+![configure maximum synchronizations](resources/v3-max-periodic-adv.png?darkModeUrl=resources/v3-max-periodic-adv.png)
 
 ### Enabling the Feature
 

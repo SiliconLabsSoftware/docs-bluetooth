@@ -77,9 +77,9 @@ The first step is to build a bootloader for the EFR32 device operating as NCP, o
 
 ![Bootloader  – NCP BGAPI UART DFU](resources/sld679-image9.png)
 
-Build the **Bootloader - NCP BGAPI UART DFU** project, and program it to the EFR device to be used as an access point. For more information on how to build or program devices using Simplicity Studio v5, see the [**Simplicity Studio® 5 User's Guide**](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-overview/).
+Build the **Bootloader - NCP BGAPI UART DFU** project, and program it to the EFR device that you want to use as the access point. For more information on how to build or program devices using Simplicity Studio v6, see the [**Simplicity Studio® 6 User's Guide**](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/).
 
-More information about the bootloaders can be found in [Silicon Labs Gecko Bootloader User's Guide for GSDK 4.0 and Higher (series 1 and 2 devices)](/bluetooth/{build-docspace-version}/bootloader-user-guide-gsdk-4) or [Silicon Labs Gecko Bootloader User’s Guide for Series 3 and Higher](/bluetooth/{build-docspace-version}/bootloader-user-guide-series3-and-higher).
+For more information about bootloaders, see [Silicon Labs Gecko Bootloader User's Guide for GSDK 4.0 and Higher (series 1 and 2 devices)](/bluetooth/{build-docspace-version}/bootloader-user-guide-gsdk-4) or [Silicon Labs Gecko Bootloader User’s Guide for Series 3 and Higher](/bluetooth/{build-docspace-version}/bootloader-user-guide-series3-and-higher).
 
 ### Access Point Firmware
 

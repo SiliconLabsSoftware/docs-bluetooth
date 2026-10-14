@@ -23,7 +23,7 @@ To add the connection subrating feature to your application, follow the instruct
 ### Adding the Feature
 
  By default, this feature is not included in the stack and the **Bluetooth Feature Connection Subrating (bluetooth_feature_connection_subrating)** software component must be installed to get it work:
-
+> **Note**: this component is currently in experimental 
  ![Bluetooth Feature Connection Subrating component](resources/subrate_component.png?darkModeUrl=resources/subrate_component.png)
 
 ### Utilizing Connection Subrating Component

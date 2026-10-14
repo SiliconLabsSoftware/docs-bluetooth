@@ -26,9 +26,7 @@ After the advertising is started, a central device can discover the peripheral a
 
 > It is worth keeping count of the live connections and not re-starting advertising after the limit of maximum number of connections is reached.
 
-By default, four simultaneous connections are enabled in the stack. To increase the number of supported connections, go to the configuration of the **Bluetooth Core** software component and increase the *Maximum number of connections*:
-
-![Bluetooth Core Component](resources/bluetooth-core.png?darkModeUrl=resources/bluetooth-core.png)
+By default, the stack supports four simultaneous connections. To increase the number of supported connections, open the **Connection** software component configuration and increase the *Max number of connections reserved for user*:
 
 ![Configuring the Maximum Number of Connections](resources/max-num-conn.png?darkModeUrl=resources/max-num-conn.png)
 

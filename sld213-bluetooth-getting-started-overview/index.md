@@ -1,13 +1,13 @@
 # Getting Started with Silicon Labs Bluetooth LE Development
 
 To get started with Bluetooth LE development, download the Simplicity Studio Development environment
-as described in the [Simplicity Studio 5 User's Guide](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-getting-started/). Simplicity Studio 5 includes everything needed for IoT product development with Silicon Labs devices including a resource and project launcher, software configuration tools, full IDE with GNU toolchain, and analysis tools.
+as described in the [Simplicity Studio 6 User's Guide](https://docs.silabs.com/ssv6ug/latest/ssv6ug-overview/). Simplicity Studio 6 includes everything you need to develop IoT products with Silicon Labs devices, including a project launcher, software configuration tools, GNU toolchain, and analysis tools.
 
-Once you have downloaded Simplicity Studio, you will be prompted to install the Gecko SDK (GSDK), which contains the Bluetooth Software Development Kit (SDK). The GSDK combines Silicon Labs wireless SDKs and Gecko Platform into a single, integrated package. The Bluetooth SDK comes with a number of example application that you can then modify to create your own applications.
+Once you have downloaded Simplicity Studio, you are prompted to install the Simplicity SDK (SiSDK), which contains the Bluetooth Software Development Kit (SDK). The SDK comes with a number of example application that you can then modify to create your own applications.
 
 See [Prerequisites](#prerequisites) for additional details.
 
-These pages focus on use and development in the Simplicity Studio 5 environment. Alternatively, Gecko SDK may be installed manually by downloading or cloning the latest from GitHub. See the [GitHub site](https://github.com/SiliconLabs/gecko_sdk) for more information.
+These pages focus on using and developing with Simplicity Studio 6. Alternatively, you can manually install the Simplicity SDK by downloading or cloning the latest version from GitHub. For more information, see [GitHub site](https://github.com/SiliconLabs/simplicity_sdk) for more information.
 
 Silicon Labs provides two different starter kits. The links below provide specific instructions for getting started with each kit.
 
@@ -24,7 +24,7 @@ Before beginning application development, you should have:
 
 - Purchased an EFR32BG Wireless Starter Kit or BGM220 Explorer Kit.
 - Created an account at Silicon Labs. You can register at [https://siliconlabs.force.com/apex/SL_CommunitiesSelfReg?form=short](https://siliconlabs.force.com/apex/SL_CommunitiesSelfReg?form=short).
-- Downloaded Simplicity Studio 5 and the Silicon Labs Gecko SDK containing the Bluetooth SDK and become generally familiar with the SSv5 Launcher perspective. SSv5 installation and getting started instructions along with a set of detailed references can be found in the online *Simplicity Studio 5 User’s Guide*, available on [https://docs.silabs.com/](https://docs.silabs.com/) and through the SSv5 help menu.
+- Downloaded Simplicity Studio 6 and the Silicon Labs Simplicity SDK, which contains the Bluetooth SDK, and become familiar with the Simplicity Studio 6 Launcher perspective. For installation and getting started instructions and detailed references, see the online *Simplicity Studio 6 User’s Guide*, available on [https://docs.silabs.com/](https://docs.silabs.com/) and through the Simplicity Studio 6 Help menu.
 - Obtained a compatible compiler (See the Bluetooth SDK’s release notes for the compatible versions):
 
   - Simplicity Studio comes with a free GCC C-compiler.
@@ -49,12 +49,12 @@ The Gecko Platform is a set of drivers and other lower layer features that inter
 
 ## Documentation
 
-Hardware-specific documentation may be accessed through links on the part Overview tab in Simplicity Studio 5.
+Access hardware-specific documentation from the links on the part **Overview** tab in Simplicity Studio 6.
 
 ![Overview with hardware doc](resources/sld213-image3.png?darkModeUrl=resources/sld213-image3.png)
 
 ## Support
 
-You can access the Silicon Labs support portal at [https://www.silabs.com/support](https://www.silabs.com/support) through Simplicity Studio 5’s Welcome view under Learn and Support. Use the support portal to contact Customer Support for any questions you might have during the development process.
+You can access the Silicon Labs support portal at [https://www.silabs.com/support](https://www.silabs.com/support) from Learn and Support in the Simplicity Studio 6 Welcome view. Use the support portal to contact Customer Support if you have questions during development.
 
 ![Learn and Support tab](resources/sld213-image2.png?darkModeUrl=resources/sld213-image2.png)

@@ -87,10 +87,10 @@ Gecko Bootloader is included in the Gecko SDK Suite. A number of predefined conf
 
 To create a new bootloader project:
 
-1. Open Simplicity Studio and select your device in the Devices or Debug Adapters tab.
-2. Check the Preferred SDK under General Information in the OVERVIEW tab.
-3. Click EXAMPLE PROJECTS & DEMOS tab, and select Bootloader under Technology Type section.
-4. Select the appropriate Gecko Bootloader application type for your device **(e.g., Internal Storage Bootloader)**, click FINISH.
+1. Open Simplicity Studio and select your device on the Devices or Debug Adapters tab.
+2. Check the Preferred SDK version.
+3. Click **EXAMPLE PROJECTS & DEMOS** tab, and then select Bootloader in the MCU section.
+4. Select the appropriate bootloader application type for your device, such as **(Internal Storage Bootloader)**, and then select **CREATE**.
 
    ![Bootloader Project Generation](resources/ss1.png?darkModeUrl=resources/ss1.png)
 
@@ -98,13 +98,12 @@ To create a new bootloader project:
 
 After the bootloader project is created, the Application Builder automatically opens up. To add security features, do the following:
 
-1. Open the **Plugins** tab.
-2. Click on **Bootloader Core**.
-3. On the right side tick the checkboxes:
+1. Open the **Software components** tab.
+2. Select **Bootloader Core** and then select **Configure**.
+3. Enable the following features:
    - Require signed firmware upgrade files.
    - Require encrypted firmware upgrade files.
    - Enable secure boot.
-4. Click Generate in the upper right corner.
 
 ![Security Features In Bootloader Project](resources/ss2.png?darkModeUrl=resources/ss2.png)
 
@@ -161,11 +160,14 @@ Because OTA DFU is not fully implemented in the Bootloader, a minimal Bluetooth 
 To create a basic application that supports OTA DFU, do the following:
 
 1. Open Simplicity Studio and select your device in the Devices or Debug Adapters tab.
-2. Check the Preferred SDK under General Information in the OVERVIEW tab.
-3. Click EXAMPLE PROJECTS & DEMOS tab, and select Bluetooth under Technology Type section.
-4. Select **Bluetooth - SoC Empty** sample application, and click FINISH.
+2. Check the Preferred SDK version.
+3. Select the **EXAMPLE PROJECTS & DEMOS** tab, and then select **Bluetooth** in the **Technology Type** section.
+4. Select **Bluetooth - SoC Empty** sample application, and then select **Finish**.
 
    ![SoC Empty Project Generation](resources/ss3.png?darkModeUrl=resources/ss3.png)
+
+   ![SoC Empty Project Generation](resources/ss4.png?darkModeUrl=resources/ss4.png)
+
 
 ### Build the Basic Application
 

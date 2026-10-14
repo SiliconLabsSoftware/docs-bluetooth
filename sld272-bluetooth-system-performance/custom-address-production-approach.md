@@ -147,7 +147,7 @@ First, generate a blank NVM3 image file using the following command:
 
 `$ commander nvm3 initfile --address 0x00074000 --size 0xA000 --device EFR32MG22 --outfile nvm3_custom_mac.s37`
 
-To determine the size of the NVM3, use the configuration of the *"NVM3 Default Instance"* software component as a reference. The Silicon Labs example projects set 5 flash pages by default, seen in figure 3 below. The page size depends on the device. For the EFR32MG22 each flash page is 8-kB. See your device's reference manual for details.
+To determine the NVM3 size, use the configuration of the *"NVM3 Default Config"* software component as a reference. Silicon Labs example projects use five flash pages by default, as shown in Figure 3. The page size depends on the device. For the EFR32MG22, each flash page is 8 kB. For more information, see the reference manual for your device.
 
 To determine the starting address, subtract six flash pages from the end address of the main flash (5 pages for the NVM3 and 1 page for manufacturing tokens). See [Wireless Gecko Resources](/bluetooth/{build-docspace-version}/bluetooth-c-soc-dev-guide-sdk-v9x/07-wireless-gecko-resources) for flash distribution details in the BLE stack.
 

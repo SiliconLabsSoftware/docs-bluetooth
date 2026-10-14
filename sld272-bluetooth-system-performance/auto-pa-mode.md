@@ -23,7 +23,7 @@ In some use cases, however, high accuracy output is needed both above and below 
 
 ## Enabling Auto PA Mode
 
-By default, the used PA can be configured under the configuration of **RAIL Utility, PA** software components, as shown here:
+By default, the used PA can be configured under the configuration of **RAIL Utility, PA (RAIL 3)** software components, as shown here:
 
 ![PA mode configuration](resources/pa-selection.png?darkModeUrl=resources/pa-selection.png)
 

@@ -12,17 +12,13 @@ To implement this application, you need to make these changes:
 
 ## Adding New Attributes Using the Configuration File
 
-Beginning with SDK version 3.3, the NCP host sample applications contains a .btconf file with a basic GATT configuration. This configuration can be edited with the GATT Configurator. Although PC host examples are not handled by Simplicity Studio, .btconf files can still be edited individually. Open the Simplicity IDE perspective in Simplicity Studio and drag-and-drop the .btconf file onto the editor area. GATT Configurator will automatically open. Edit the file as described in [GATT Configurator User’s Guide for Bluetooth SDK v3.x](https://docs.silabs.com/bluetooth/latest/gatt-configurator-users-guide-ble-btmesh/) and save it. To be compatible with the code snippets, create a custom service and then add a custom characteristic with the following properties:
+Beginning with SDK version 3.3, the NCP host sample applications contains a .btconf file with a basic GATT configuration. This configuration can be edited with the GATT Configurator as described in [GATT Configurator User’s Guide for Bluetooth SDK v3.x](https://docs.silabs.com/bluetooth/latest/gatt-configurator-users-guide-ble-btmesh/). To be compatible with the code snippets, create a custom service and then add a custom characteristic with the following properties:
 
 - ID:  my_data
 
 - Read, Write, Indicate
 
 - Value length: 20 bytes
-
-Once the .btconf file is saved it must be turned into source code by running `make gattdb`. Run this command in the root folder of your example, where you can find the makefile. Note that the generator script requires installing Python 3 and the Jinja2 package by calling `pip install jinja2`.
-
-![make gattdb](resources/an1259-v08-make-code-snippet.png)
 
 The output (gatt_db.c / gatt_db.h) is located in the autogen folder. These values will be used as parameters for the dynamic GATT APIs. The database will be created (that is, built on the NCP target with the dynamic GATT API) automatically in the initialization phase before the boot event is sent to the application. The application is still able update the GATT database with the dynamic GATT commands, as described in the next section.
 
@@ -106,7 +102,7 @@ Now you can rebuild the host application. See the build process with MinGW in [B
 
 ## Testing
 
-1. Start the host application from the *\exe* folder.
+1. Start the host application from the *\build\debug* folder.
 
 2. Once the PC is connected to WSTK (via UART), the WSTK starts advertising on Bluetooth.
 

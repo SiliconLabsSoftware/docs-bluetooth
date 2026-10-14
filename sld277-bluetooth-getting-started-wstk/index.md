@@ -45,7 +45,7 @@ At this point, BGAPI 3.x commands can be sent to the kit. Starting with Bluetoot
 
 #### Bluetooth NCP Commander
 
-Bluetooth NCP Commander can be opened through the Project Configurator’s Configuration Tools tab, or from the Simplicity Studio Tools menu.
+Open Bluetooth NCP Commander from the Simplicity Studio Tools menu.
 
 ![Opening NCP Commander](resources/sld277-image18.png?darkModeUrl=resources/sld277-image18.png)
 

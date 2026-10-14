@@ -46,9 +46,10 @@ Note that by default nearly all HCI events sent from the controller have been fi
 
 ### Three-Wire UART
 
->**Note**: To use the Three-Wire UART transport layer (H5) for transmitting HCI messages instead of the default UART transport layer (H4), add the HCI Three-Wire UART software component to the project. This will add framing, software flow control, and data integrity check to the transport layer, making the communication via UART much more reliable.
+>**Note**: To use the Three-Wire UART transport layer (H5) for transmitting HCI messages instead of the default UART transport layer (H4), add the HCI Three-Wire UART software component to the project. The HCI Three-Wire UART component is **Evaluation** quality currently . This will add framing, software flow control, and data integrity check to the transport layer, making the communication via UART much more reliable.
 
 To enable the Three-Wire UART transport layer instead of the UART, add the *HCI Three-Wire UART* software component to the project:
+![HCI Three-Wire UART component](./resources/sld865-image8_0.png)
 
 ![HCI Three-Wire UART component](./resources/sld865-image8.png)
 
@@ -64,7 +65,7 @@ For the basic HCI-enabled application in the RCP mode the following components a
 
 - HCI CPC component (if CPC transport protocol is used)
 
-Other components are required to make a reasonably functional application. For example, the **Connection** and **Advertiser** components are required (and installed by default) to make an application that can advertise and accept connections. If the application should be able to accept a large number of simultaneous connections, also including the **Even Connection Scheduling Algorithm** component is useful.
+Other components are required for a functional application. For example, the **Connection** and **Advertising Base Feature** components are required and installed by default for an application that advertises and accepts connections. To support a large number of simultaneous connections, also include the **Even Connection Scheduling Algorithm** component.
 
 ![Even Connection Scheduling Algorithm](./resources/sld865-image9.png)
 

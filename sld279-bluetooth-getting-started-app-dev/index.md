@@ -8,13 +8,13 @@ Developing a Bluetooth application consists of two main steps: defining the GATT
 
 > **Note**: Beginning with Bluetooth SDK version 2.7.0.0, all devices must be loaded with the Gecko Bootloader as well as the application. While you are getting started, the easiest way to do this is to load any of the precompiled demo images that come with the bootloader configured as part of the image. When you flash your application it overwrites the demo application, but the bootloader remains. Subsequently you may wish to build your own bootloader, as described in *UG266: Silicon Labs Gecko Bootloader User’s Guide for GSDK 3.2 and Lower*, [Silicon Labs Gecko Bootloader User's Guide for GSDK 4.0 and Higher (series 1 and 2 devices)](/bluetooth/{build-docspace-version}/bootloader-user-guide-gsdk-4), or [Silicon Labs Gecko Bootloader User’s Guide for Series 3 and Higher](/bluetooth/{build-docspace-version}/bootloader-user-guide-series3-and-higher).
 
-New Project creation is done through three dialogs:
+To create a new project, follow these steps:
 
-- Target, SDK, and Toolchain
+- Select the Example and the SDK
 
     ![Target, SDK, and Toolchain Selection](resources/sld279-image30.png?darkModeUrl=resources/sld279-image30.png)
 
-- Examples
+- After selecting the Example, select the target
 
     ![Examples](resources/sld279-image31.png?darkModeUrl=resources/sld279-image31.png)
 
@@ -74,7 +74,7 @@ To see the component library, click the \<project-name>.slcp tab of your project
 
 ![Software components tab](resources/sld279-image35.png?darkModeUrl=resources/sld279-image35.png)
 
-Components installed in the project are checked (1) and can be uninstalled. Configurable components are indicated by a gear symbol (2).
+Components installed in the project are checked and can be uninstalled. Configurable components are indicated by a gear symbol.
 
 ![Single component view](resources/sld279-image36.png?darkModeUrl=resources/sld279-image36.png)
 
@@ -82,13 +82,16 @@ Click **Configure** to open the Component Editor and see a configurable componen
 
 ![Configurator view](resources/sld279-image37.png?darkModeUrl=resources/sld279-image37.png)
 
-As you change component configurations, your changes are automatically saved and project files are automatically generated. You can see generation progress in the lower right corner of the Simplicity IDE. Wait until generation is complete before building the application image.
+As you change component configurations, Simplicity Studio automatically saves your changes and generates the project files. The **Saved Changes** notification appears in the middle of the Simplicity Studio window.
 
 ![Build progress](resources/sld279-image38.png?darkModeUrl=resources/sld279-image38.png)
 
 ### Building and Flashing
 
-To build and debug your project click **Debug** (bug icon) on the Simplicity IDE It will build and download your project and open up the Debug perspective. Click **Play** (next to Debug) to start running you project on the device.
+To build and debug your project click **Open in VS Code** on the project page in Simplicity Studio to be able to build the project.
+> Note: VS Code requires **Silicon Labs Extension** to work properly. During the project generation **Make** and **CMake** options can be selected to build with different platforms.
+
+After the **Silicon Labs Extension** opened with the selected project, you can build, flash and debug your project. Click **Chip icon** next to **Build** to flash the built project on the device. You can start **Debug** by clicking the **Play buttons** next to the **Flash button**.
 
 ![Debug icons](resources/sld279-image39.png?darkModeUrl=resources/sld279-image39.png)
 
@@ -134,7 +137,7 @@ Characteristics are generally complex structures of fields. If you want to know 
 
 ### The Pin Tool
 
-Simplicity Studio 5 offers a Pin Tool that allows you to easily configure new peripherals or change the properties of existing ones. In the Project Configurator SOFTWARE COMPONENTS tab, expand the Advanced Configurators group and open the Pin Tool. The graphical view differs based on the chip.
+Simplicity Studio 6 offers Pin Tool that allows you to easily configure new peripherals or change the properties of existing ones. In the Project folder, double-click the **\<project_name\>.pintool** file to open the Pin Tool. The graphical view varies depending on the chip.
 
 ![The pin tool view 1](resources/pintool-start.png?darkModeUrl=resources/pintool-start.png)
 
@@ -154,7 +157,7 @@ To profile the current project, click Tools in the menu bar and select Energy Pr
 
 ![Energy Profiler Perspective](resources/sld279-image44.png?darkModeUrl=resources/sld279-image44.png)
 
-See *UG343: Multi-Node Energy Profiler User’s Guide* for details on how to use this tool. You can switch easily between Simplicity IDE and Energy Profiler perspectives using the Perspective buttons in the upper right corner of your current perspective.
+For more information about using this tool, see *UG343: Multi-Node Energy Profiler User’s Guide* . To open the Energy Profiler, select **Tools** > **Energy Profiler**.
 
 ![Perspective buttons](resources/sld279-image45.png?darkModeUrl=resources/sld279-image45.png)
 
