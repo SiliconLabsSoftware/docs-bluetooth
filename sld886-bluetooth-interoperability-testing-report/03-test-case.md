@@ -275,7 +275,7 @@ The table below provides the details of the test cases. All the test cases were 
     <tr>
       <td>5.6</td>
       <td>Characteristic</td>
-      <td>User Len 1</td>
+      <td>User Length 1</td>
       <td>
         <ul>
           <li>Type = user</li>
@@ -289,7 +289,7 @@ The table below provides the details of the test cases. All the test cases were 
     <tr>
       <td>5.7</td>
       <td>Characteristic</td>
-      <td>User Len 255</td>
+      <td>User Length 255</td>
       <td>
         <ul>
           <li>Type = user</li>
@@ -303,7 +303,7 @@ The table below provides the details of the test cases. All the test cases were 
     <tr>
       <td>5.8</td>
       <td>Characteristic</td>
-      <td>User Len Variable 4</td>
+      <td>User Length Variable 4</td>
       <td>
         <ul>
           <li>Type = user</li>
@@ -359,7 +359,6 @@ The table below provides the details of the test cases. All the test cases were 
         </ul>
       <p>The parameters are set as above and device sends the data to the mobile. Mobile computes the throughput (Bytes/S).</p>
       <p>Pass if there is successful data transfer between the device and mobile.</p>
-      <p>See <a href="04-test-results.md"></a> for more details.</p>
       </td>
     </tr>
     <tr>
@@ -414,6 +413,43 @@ The table below provides the details of the test cases. All the test cases were 
         <p>Mobile pairs with device with bonded mode by enter passkey is 123456.</p>
         <p>Mobile reads pre-set characteristic value (0x55) with bonded read property.</p>
         <p>Pass if there is no error and read value matches the pre-set value (0x55) after pairing.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>8.4</td>
+      <td>Security and Encryption</td>
+      <td>CCCD retention on bonded connection</td>
+      <td>
+        <ul>
+          <li>Type = hex</li>
+          <li>Length = 1</li>
+          <li>Properties = Bonded_Notify</li>
+          <li>Value = 0x55</li>
+        </ul>
+        <p>Mobile connects to DUT and creates bonding with DUT(reuse existing bonding from test case 8.3)</p>
+        <p>Mobile writes CCCD to different value from the default and disconnects from DUT.</p>
+        <p>Mobile reconnects to DUT (Pass: if reconnect without pairing process).</p>
+        <p>Mobile reads CCCD (Pass: if the CCCD value is the same as the value written before the disconnection).</p>
+        <p>Mobile writes CCCD (Pass: if the CCCD value was written).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>8.5</td>
+      <td>Security and Encryption</td>
+      <td>LE Privacy 1.2</td>
+      <td>
+        <ul>
+          <li>Type = hex</li>
+          <li>Length = 2</li>
+          <li>Properties = Read, write</li>
+          <li>Value =0x01</li>
+        </ul>
+        <p>Mobile connects to and creates bonding with DUT (reuse existing bonding from test case 8.3)</p>
+        <p>Mobile writes a value 00 04 00 to the characteristic. This triggers a connection close on DUT. </p>
+        <p>DUT adds the tester’s address to the accept list and enables accept list based filtering.</p>
+        <p>DDUT adds the tester’s identity resolution key (IRK) to the resolve list.</p>
+        <p>Mobile reconnects to DUT with resolvable private address (RPA) - RPA is sent in the connection request (if tester used RPA during the first connection, then a new RPA should be generated)</p>
+        <p>Test case is success if mobile was able to connect to DUT</p>
       </td>
     </tr>
   </tbody>
