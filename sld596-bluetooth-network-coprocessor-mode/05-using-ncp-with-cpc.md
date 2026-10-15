@@ -14,7 +14,7 @@ The CPC daemon acts as a bridge between the host and the target application. It 
 
 By default, the NCP host application does not use CPC. Build the application with the **Host NCP CPC adapter (Linux only)** component to enable CPC support.
 
->**Note**: The Host NCP CPC adapter (Linux only) component is Experimental currently. 
+> **Note**: The Host NCP CPC adapter (Linux only) component is Experimental currently. 
 
 ## Use Cases
 
