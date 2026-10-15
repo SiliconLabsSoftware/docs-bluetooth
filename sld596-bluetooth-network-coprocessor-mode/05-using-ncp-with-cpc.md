@@ -30,8 +30,8 @@ To make the target use CPC communication, replace the USART component in the **b
 
 In NCP setup **Bluetooth NCP Transport over CPC** component is required.
 
->**Note**: The Bluetooth NCP Transport over CPC component is Experimental currently. 
-    
+> **Note**: The Bluetooth NCP Transport over CPC component is Experimental currently. 
+
 ![Add Target NCP CPC](resources/Studio6-target-app-CPC.png)
 
 The encryption of the communication is enabled by default. For developing and debugging, Silicon Labs recommends adding the **CPC SECURITY NONE** component so that the packet traces can be easier analyzed.
