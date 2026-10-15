@@ -60,7 +60,9 @@ If the **CPC SECURITY NONE** component was added to the target, set **disable_en
 
 3. Add *Host NCP CPC adapter (Linux only)* component
     ![Add Host NCP CPC](resources/Studio6-host-app-CPC.png)
+
 > **Note**: The Host NCP CPC adapter (Linux only) component is Experimental currently. 
+
 4. Build the project
     ```C
     make -f bt_host_empty.Makefile
