@@ -1,5 +1,7 @@
 # Bluetooth LE Auto PA mode
 
+**NOTE**: The content on this page is deprecated as of the SiSDK 2025.6.1 release. For additional details or guidance, please contact Silicon Labs Support.
+
 ## Introduction
 
 The EFR32 families of chips each come equipped with two or three Power Amplifiers (PAs):
