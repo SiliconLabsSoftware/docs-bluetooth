@@ -1,0 +1,38 @@
+note over Central App,Central Stack,Peripheral Stack,Peripheral App
+Devices connected to each other.
+end note
+
+Central Stack->>Central App: sl_bt_evt_connection_opened
+activate Central Stack
+activate Peripheral Stack
+
+note over Central App
+    Retrieve devices role (central), connection handle,
+    bonding handle, local advertising set.
+end note
+
+Peripheral Stack->>Peripheral App: sl_bt_evt_connection_opened
+
+note over Peripheral App
+    Retrieve devices role (peripheral), connection handle,
+    bonding handle, local advertising set.
+end note
+
+Central Stack->>Central App: sl_bt_evt_connection_parameters
+Peripheral Stack->>Peripheral App: sl_bt_evt_connection_parameters
+
+note over Central App,Central Stack,Peripheral Stack,Peripheral App
+    Retrieve connection handle, get connection interval, get latency, supervision timeout,
+    Connection security mode, Maximum data channel PDU payloads size
+end note
+
+Central Stack-->>Peripheral Stack: Exchange MTU Request
+Peripheral Stack-->>Central Stack: Exchange MTU Response
+Central Stack->>Central App: sl_bt_evt_gatt_mtu_exchanged
+Peripheral Stack->>Peripheral App: sl_bt_evt_gatt_mtu_exchanged
+
+Central App->>Central Stack: sl_bt_connection_set_parameters
+Central Stack-->>Peripheral Stack: LL_CONNECTION_PARAM_REQ
+Peripheral Stack-->>Central Stack: LL_CONNECTION_UPDATE_IND
+Central Stack->>Central App: el_bt_evt_connection_parameters
+Peripheral Stack->>Peripheral App: sl_bt_evt_connection_parameters

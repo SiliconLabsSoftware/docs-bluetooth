@@ -1,0 +1,1128 @@
+{
+  "id": "bluetooth",
+  "version": "11.0.0",
+  "title": "Bluetooth LE",
+  "menu": [
+    {
+      "id": "bluetooth-start",
+      "title": "Developing with Bluetooth",
+      "menu": [
+        {
+          "match": "sld174-bluetooth-start/index.md",
+          "title": "Index"
+        }
+      ]
+    },
+    {
+      "title": "Release Notes",
+      "url": "https://docs.silabs.com/bluetooth/latest/sisdk-bt-release-notes/"
+    },
+    {
+      "title": "Getting Started",
+      "menu": [
+        {
+          "id": "bluetooth-getting-started-overview",
+          "title": "Overview",
+          "menu": [
+            {
+              "match": "sld213-bluetooth-getting-started-overview/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-getting-started-wstk",
+          "title": "Getting Started with the WSTK",
+          "menu": [
+            {
+              "match": "sld277-bluetooth-getting-started-wstk/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-getting-started-bgm",
+          "title": "Getting Started with the BGM220",
+          "menu": [
+            {
+              "match": "sld278-bluetooth-getting-started-bgm/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-getting-started-demos-examples",
+          "title": "More Demos and Examples",
+          "menu": [
+            {
+              "match": "sld131-bluetooth-getting-started-demos-examples/index.md",
+              "title": "Index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fundamentals",
+      "menu": [
+        {
+          "id": "bluetooth-fundamentals-overview",
+          "title": "Overview",
+          "menu": [
+            {
+              "match": "sld214-bluetooth-fundamentals-overview/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-le-fundamentals",
+          "title": "Bluetooth Le Fundamentals",
+          "menu": [
+            {
+              "match": "sld695-bluetooth-le-fundamentals/index.md",
+              "title": "Introduction"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/01-background.md",
+              "title": "Background"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/02-bluetooth-smart-architecture.md",
+              "title": "Bluetooth LE Architecture"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/03-physical-layer.md",
+              "title": "Physical Layer"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/04-link-layer.md",
+              "title": "Link Layer"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/05-generic-access-profile-gap.md",
+              "title": "Generic Access Profile (GAP)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/06-attribute-protocol-att.md",
+              "title": "Attribute Protocol (ATT)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/07-generic-attribute-profile-gatt.md",
+              "title": "Generic Attribute Profile (GATT)"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/08-bluetooth-smart-security.md",
+              "title": "Bluetooth LE Security"
+            },
+            {
+              "match": "sld695-bluetooth-le-fundamentals/09-next-steps.md",
+              "title": "Next Steps"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-fundamentals-advertising-scanning",
+          "title": "Advertising and Scanning",
+          "menu": [
+            {
+              "match": "sld268-bluetooth-fundamentals-advertising-scanning/accept-list.md",
+              "title": "Accept List"
+            },
+            {
+              "match": "sld268-bluetooth-fundamentals-advertising-scanning/advertising-data-basics.md",
+              "title": "Advertising Data Basics"
+            },
+            {
+              "match": "sld268-bluetooth-fundamentals-advertising-scanning/index.md",
+              "title": "Index"
+            },
+            {
+              "match": "sld268-bluetooth-fundamentals-advertising-scanning/periodic-advertising.md",
+              "title": "Periodic Advertising"
+            },
+            {
+              "match": "sld268-bluetooth-fundamentals-advertising-scanning/scan-request-reporting.md",
+              "title": "Scan Request Reporting"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-fundamentals-connections",
+          "title": "Connections",
+          "menu": [
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/coded-phy.md",
+              "title": "Coded Phy"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/connection-flowcharts.md",
+              "title": "Connection Flowcharts"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/connection-process.md",
+              "title": "Connection Process"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/connection-subrating.md",
+              "title": "Connection Subrating"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/dual-topology.md",
+              "title": "Dual Topology"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/index.md",
+              "title": "Index"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/multi-central-topology.md",
+              "title": "Multi Central Topology"
+            },
+            {
+              "match": "sld269-bluetooth-fundamentals-connections/multi-peripheral-topology.md",
+              "title": "Multi Peripheral Topology"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-gatt",
+          "title": "GATT Protocol",
+          "menu": [
+            {
+              "match": "sld221-bluetooth-gatt/acknowledged-vs-unacknowledged.md",
+              "title": "Acknowledged Vs Unacknowledged"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/characteristics-value-types.md",
+              "title": "Characteristics Value Types"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/gatt-caching.md",
+              "title": "Gatt Caching"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/gatt-flowcharts.md",
+              "title": "Gatt Flowcharts"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/gatt-server-client-roles.md",
+              "title": "Gatt Server Client Roles"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/index.md",
+              "title": "Index"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/polymorphic-gatt.md",
+              "title": "Polymorphic Gatt"
+            },
+            {
+              "match": "sld221-bluetooth-gatt/service-change-indication.md",
+              "title": "Service Change Indication"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-fundamentals-system-performance",
+          "title": "Performance",
+          "menu": [
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/afh.md",
+              "title": "Afh"
+            },
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/compliance-power-limitations.md",
+              "title": "Compliance Power Limitations"
+            },
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/current-consumption.md",
+              "title": "Current Consumption"
+            },
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/index.md",
+              "title": "Index"
+            },
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/le-channel-classification.md",
+              "title": "Le Channel Classification"
+            },
+            {
+              "match": "sld129-bluetooth-fundamentals-system-performance/throughput.md",
+              "title": "Throughput"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-low-power-optimization",
+          "title": "Bluetooth LE Use Case-Based Low Power Optimization",
+          "menu": [
+            {
+              "match": "sld597-bluetooth-low-power-optimization/index.md",
+              "title": "Index"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-1-i-want-to-signal-the-presence-of-a-device.md",
+              "title": "Use Case 1 I Want To Signal The Presence Of A Device"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-2-i-want-to-broadcast-data-such-as-information-about-a-product-artwork.md",
+              "title": "Use Case 2 I Want To Broadcast Data Such As Information About A Product Artwork"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-3-i-want-to-broadcast-send-data-to-low-power-receivers.md",
+              "title": "Use Case 3 I Want To Broadcast Send Data To Low Power Receivers"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-4-i-want-to-broadcast-send-data-from-a-low-power-transmitter.md",
+              "title": "Use Case 4 I Want To Broadcast Send Data From A Low Power Transmitter"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-5-i-want-to-connect-to-a-device-occasionally-to-exchange-some-data.md",
+              "title": "Use Case 5 I Want To Connect To A Device Occasionally To Exchange Some Data"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-6-i-want-to-maintain-a-long-term-connection-with-occasional-data-exchange.md",
+              "title": "Use Case 6 I Want To Maintain A Long Term Connection With Occasional Data Exchange"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-7-i-want-to-send-a-lot-of-data-on-a-long-term-connection.md",
+              "title": "Use Case 7 I Want To Send A Lot Of Data On A Long Term Connection"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-8-i-want-to-exchange-data-with-many-peripheral-devices.md",
+              "title": "Use Case 8 I Want To Exchange Data With Many Peripheral Devices"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-9-i-want-to-exchange-data-with-many-low-power-peripheral-devices.md",
+              "title": "Use Case 9 I Want To Exchange Data With Many Low Power Peripheral Devices"
+            },
+            {
+              "match": "sld597-bluetooth-low-power-optimization/use-case-10-i-want-to-use-32-peripherals-with-1-central.md",
+              "title": "Use Case 10 I Want To Use 32 Peripherals With 1 Central"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Developer's Guide",
+      "menu": [
+        {
+          "id": "bluetooth-developers-guide-overview",
+          "title": "Overview",
+          "menu": [
+            {
+              "match": "sld215-bluetooth-developers-guide-overview/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-stack-overview",
+          "title": "About the Stack",
+          "menu": [
+            {
+              "match": "sld276-bluetooth-stack-overview/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-getting-started-app-dev",
+          "title": "Getting Started with Application Development",
+          "menu": [
+            {
+              "match": "sld279-bluetooth-getting-started-app-dev/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-qualification",
+          "title": "Bluetooth Qualification",
+          "menu": [
+            {
+              "match": "sld1027-bluetooth-qualification/02-bluetooth-qualification.md",
+              "title": "02 Bluetooth Qualification"
+            },
+            {
+              "match": "sld1027-bluetooth-qualification/03-step-by-step-guide-qualify-product-on-bluetooth-sig-website.md",
+              "title": "03 Step By Step Guide Qualify Product On Bluetooth Sig Website"
+            },
+            {
+              "match": "sld1027-bluetooth-qualification/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "title": "Developing and Debugging",
+          "menu": [
+            {
+              "id": "bluetooth-developing-debugging-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld216-bluetooth-developing-debugging-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-c-soc-dev-guide-sdk-v9x",
+              "title": "Silicon Labs Bluetooth C Application Developer's Guide for SDK v10.x",
+              "menu": [
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/02-application-development-flow.md",
+                  "title": "02 Application Development Flow"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/03-project-structure.md",
+                  "title": "03 Project Structure"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/04-configuring-bluetooth-stack-and-wireless-gecko-device.md",
+                  "title": "04 Configuring Bluetooth Stack And Wireless Gecko Device"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/05-bluetooth-stack-event-handling.md",
+                  "title": "05 Bluetooth Stack Event Handling"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/06-interrupts.md",
+                  "title": "06 Interrupts"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/07-wireless-gecko-resources.md",
+                  "title": "07 Wireless Gecko Resources"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/08-application-elf-file.md",
+                  "title": "08 Application Elf File"
+                },
+                {
+                  "match": "sld649-bluetooth-c-soc-dev-guide-sdk-v9x/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "gatt-configurator-users-guide-ble-btmesh",
+              "title": "GATT Configurator User's Guide for Bluetooth LE and Bluetooth Mesh",
+              "menu": [
+                {
+                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/index.md",
+                  "title": "Introduction"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-profile-toolkit-developers-guide",
+              "title": "Bluetooth Profile Toolkit Developer's Guide",
+              "menu": [
+                {
+                  "match": "sld651-bluetooth-profile-toolkit-developers-guide/01-r-introduction.md",
+                  "title": "01 R Introduction"
+                },
+                {
+                  "match": "sld651-bluetooth-profile-toolkit-developers-guide/02-r-building-gatt-database-with-profiletoolkit.md",
+                  "title": "02 R Building Gatt Database With Profiletoolkit"
+                },
+                {
+                  "match": "sld651-bluetooth-profile-toolkit-developers-guide/03-r-generating-the-code-files.md",
+                  "title": "03 R Generating The Code Files"
+                },
+                {
+                  "match": "sld651-bluetooth-profile-toolkit-developers-guide/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "network-analyzer-with-ble-btmesh",
+              "title": "Using Network Analyzer With Bluetooth Low Energy and Mesh",
+              "menu": [
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/02-hardware-and-packet-trace-interface-pti.md",
+                  "title": "Hardware and Packet Trace Interface"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/03-network-analyzer-features.md",
+                  "title": "Network Analyzer Features"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/04-network-analyzer-for-bluetooth-le-and-mesh.md",
+                  "title": "Network Analyzer for Bluetooth LE and Mesh"
+                },
+                {
+                  "match": "sld716-network-analyzer-with-ble-btmesh/05-bluetooth-mesh-networking-and-the-network-analyzer.md",
+                  "title": "Bluetooth Mesh Networking and the Network Analyzer"
+                }
+              ]
+            },
+            {
+              "title": "Transitioning from the v2.x to the v3.x Bluetooth SDK (PDF)",
+              "url": "https://www.silabs.com/documents/public/application-notes/an1255-transitioning-from-bluetooth-sdk-v2-to-v3.pdf"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-examples-overview",
+          "title": "Code Examples",
+          "menu": [
+            {
+              "match": "sld237-bluetooth-examples-overview/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "title": "Co-Processors (NCP/RCP)",
+          "menu": [
+            {
+              "id": "bluetooth-coprocessors-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld219-bluetooth-coprocessors-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-coprocessors-local-event-handling",
+              "title": "NCP Local Event Handling",
+              "menu": [
+                {
+                  "match": "sld270-bluetooth-coprocessors-local-event-handling/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-network-coprocessor-mode",
+              "title": "Using the Bluetooth Stack in Network Co-Processor Mode",
+              "menu": [
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/index.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/02-ncp-target-development.md",
+                  "title": "NCP Target Development"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/03-ncp-host-development.md",
+                  "title": "NCP Host Development"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/04-secure-ncp.md",
+                  "title": "Secure NCP"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/05-using-ncp-with-cpc.md",
+                  "title": "Using NCP with CPC ( Co-Processor Communication)"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/06-example-project-walkthrough.md",
+                  "title": "Example Project Walkthrough"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/07-custom-api-support.md",
+                  "title": "Custom API Support"
+                },
+                {
+                  "match": "sld596-bluetooth-network-coprocessor-mode/08-adding-a-new-service-to-the-ncp-example-with-dynamic-gatt-api.md",
+                  "title": "Adding New Attributes To The GATT Database"
+                }
+              ]
+            },
+            {
+              "id": "enabling-rcp-using-bt-hci",
+              "title": "Enabling Rcp Using Bt Hci",
+              "menu": [
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/02-enabling-hci-functionality.md",
+                  "title": "Enabling HCI Funtionality"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/03-sleep-modes.md",
+                  "title": "Sleep Modes"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/04-vendor-specific-hci-commands-and-events.md",
+                  "title": "Vendor Specific HCI Commands and Events"
+                },
+                {
+                  "match": "sld865-enabling-rcp-using-bt-hci/05-configuring-hardware-flow-control-in-the-wstk.md",
+                  "title": "Configuring Hardware Flow Control in the WSTK"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Bootloading",
+          "menu": [
+            {
+              "id": "bluetooth-bootloading-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld222-bluetooth-bootloading-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-bootloading-firmware-upgrade",
+              "title": "Firmware Upgrade",
+              "menu": [
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/adding-gecko-bootloader.md",
+                  "title": "Adding Gecko Bootloader"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/adding-metadata-to-gbl-files.md",
+                  "title": "Adding Metadata To Gbl Files"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/index.md",
+                  "title": "Index"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/ota-update-custom-advertising-data.md",
+                  "title": "Ota Update Custom Advertising Data"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/secure-ota-dfu.md",
+                  "title": "Secure Ota Dfu"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/upgrading-gecko-bootloader.md",
+                  "title": "Upgrading Gecko Bootloader"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/uploading-firmware-with-ota.md",
+                  "title": "Uploading Firmware With Ota"
+                },
+                {
+                  "match": "sld271-bluetooth-bootloading-firmware-upgrade/using-simplicity-connect-for-ota-dfu.md",
+                  "title": "Using Simplicity Connect For Ota Dfu"
+                }
+              ]
+            },
+            {
+              "title": "Bootloader Fundamentals",
+              "url": "https://docs.silabs.com/bluetooth/latest/bootloader-fundamentals/"
+            },
+            {
+              "title": "Bootloader User Guide Series 3 And Higher",
+              "url": "https://docs.silabs.com/bluetooth/latest/bootloader-user-guide-series3-and-higher/"
+            },
+            {
+              "title": "Bootloader User Guide Gsdk 4",
+              "url": "https://docs.silabs.com/bluetooth/latest/bootloader-user-guide-gsdk-4/"
+            },
+            {
+              "title": "Using Gecko Bootloader With Bluetooth Apps",
+              "url": "https://docs.silabs.com/bluetooth/latest/using-gecko-bootloader-with-bluetooth-apps/"
+            },
+            {
+              "title": "Series 2 Secure Boot With Rtsl",
+              "url": "https://docs.silabs.com/bluetooth/latest/series2-secure-boot-with-rtsl/"
+            },
+            {
+              "title": "Bootloader Transitioning Guide Gsdk V 40 And Higher",
+              "url": "https://docs.silabs.com/bluetooth/latest/bootloader-transitioning-guide-gsdk-v40-and-higher/"
+            }
+          ]
+        },
+        {
+          "title": "Performance",
+          "menu": [
+            {
+              "id": "bluetooth-performance-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld224-bluetooth-performance-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-system-performance",
+              "title": "System Performance",
+              "menu": [
+                {
+                  "match": "sld272-bluetooth-system-performance/auto-pa-mode.md",
+                  "title": "Auto Pa Mode"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/current-consumption-tx-power.md",
+                  "title": "Current Consumption Tx Power"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/custom-address-production-approach.md",
+                  "title": "Custom Address Production Approach"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/index.md",
+                  "title": "Index"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/lfrco-clock-source.md",
+                  "title": "Lfrco Clock Source"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/link-layer-scheduler.md",
+                  "title": "Link Layer Scheduler"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/radio-task-priorities.md",
+                  "title": "Radio Task Priorities"
+                },
+                {
+                  "match": "sld272-bluetooth-system-performance/tx-power.md",
+                  "title": "Tx Power"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-efr32bg-smart-device-power-consumption",
+              "title": "EFR32BG SoC Bluetooth Smart Device Power Consumption Measurements",
+              "menu": [
+                {
+                  "match": "sld595-bluetooth-efr32bg-smart-device-power-consumption/01-setup.md",
+                  "title": "01 Setup"
+                },
+                {
+                  "match": "sld595-bluetooth-efr32bg-smart-device-power-consumption/02-test-example.md",
+                  "title": "02 Test Example"
+                },
+                {
+                  "match": "sld595-bluetooth-efr32bg-smart-device-power-consumption/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bt-rf-phy-evaluation-using-dtm-sdk-v3x",
+              "title": "RF PHY Layer Evaluation in Bluetooth SDK v3.x and Higher",
+              "menu": [
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/01-basics-of-the-direct-test-mode-dtm.md",
+                  "title": "01 Basics Of The Direct Test Mode Dtm"
+                },
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/02-tests-enabled-in-the-dtm-framework.md",
+                  "title": "02 Tests Enabled In The Dtm Framework"
+                },
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/03-testing-with-bgtool.md",
+                  "title": "03 Testing With Bgtool"
+                },
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/04-testing-with-the-dtm-2-wire-firmware.md",
+                  "title": "04 Testing With The Dtm 2 Wire Firmware"
+                },
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/05-test-examples-with-the-bgapi-commands-test-dtm-tx-and-test-dtm-rx.md",
+                  "title": "05 Test Examples With The Bgapi Commands Test Dtm Tx And Test Dtm Rx"
+                },
+                {
+                  "match": "sld646-bt-rf-phy-evaluation-using-dtm-sdk-v3x/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-interoperability-testing-report",
+              "title": "Bluetooth Low Energy Interoperability Testing Report",
+              "menu": [
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/01-test-setup.md",
+                  "title": "01 Test Setup"
+                },
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/02-test-environment.md",
+                  "title": "02 Test Environment"
+                },
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/03-test-case.md",
+                  "title": "03 Test Case"
+                },
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/04-test-results.md",
+                  "title": "04 Test Results"
+                },
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/05-references.md",
+                  "title": "05 References"
+                },
+                {
+                  "match": "sld886-bluetooth-interoperability-testing-report/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "title": "Large Network Testing Dmp Ble Zigbee Soc",
+              "url": "https://docs.silabs.com/bluetooth/latest/large-network-testing-dmp-ble-zigbee-soc/"
+            }
+          ]
+        },
+        {
+          "title": "Multiprotocol",
+          "menu": [
+            {
+              "id": "bluetooth-multiprotocol-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld226-bluetooth-multiprotocol-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "title": "Multiprotocol Fundamentals",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-fundamentals/"
+            },
+            {
+              "title": "Multiprotocol Dynamic Ug",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-dynamic-ug/"
+            },
+            {
+              "title": "Multiprotocol Dynamic Ble Ot On Soc",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-dynamic-ble-ot-on-soc/"
+            },
+            {
+              "title": "Multiprotocol Dynamic Ble Proprietary On Rail",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-dynamic-ble-proprietary-on-rail/"
+            },
+            {
+              "title": "Multiprotocol Solution Linux",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-solution-linux/"
+            },
+            {
+              "title": "Dynamic Multiprotocol Bluetooth Zigbee Sdk 7 X Higher",
+              "url": "https://docs.silabs.com/bluetooth/latest/dynamic-multiprotocol-bluetooth-zigbee-sdk-7x-higher/"
+            }
+          ]
+        },
+        {
+          "title": "Non-Volatile Data Storage",
+          "menu": [
+            {
+              "id": "bluetooth-memory-use-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld228-bluetooth-memory-use-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "title": "Non Volatile Data Storage Fundamentals",
+              "url": "https://docs.silabs.com/bluetooth/latest/non-volatile-data-storage-fundamentals/"
+            },
+            {
+              "title": "Using Third Generation Nonvolatile Memory",
+              "url": "https://docs.silabs.com/bluetooth/latest/using-third-generation-nonvolatile-memory/"
+            }
+          ]
+        },
+        {
+          "title": "Security",
+          "menu": [
+            {
+              "id": "bluetooth-security-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld230-bluetooth-security-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-security-pairing-processes",
+              "title": "Security Pairing Processes",
+              "menu": [
+                {
+                  "match": "sld273-bluetooth-security-pairing-processes/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "title": "Iot Endpoint Security Fundamentals",
+              "url": "https://docs.silabs.com/bluetooth/latest/iot-endpoint-security-fundamentals/"
+            },
+            {
+              "id": "bluetooth-application-security-design-considerations",
+              "title": "Bluetooth Application Security Design Considerations",
+              "menu": [
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/index.md",
+                  "title": "Overview"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/01-introduction.md",
+                  "title": "Introduction"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/02-working-with-stack-security-features.md",
+                  "title": "Working with Stack Security Features"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/03-privacy-and-tracking.md",
+                  "title": "Privacy and Tracking"
+                },
+                {
+                  "match": "sld814-bluetooth-application-security-design-considerations/04-application-layer-security.md",
+                  "title": "Application Llayer Security"
+                }
+              ]
+            },
+            {
+              "title": "Series 2 Secure Debug",
+              "url": "https://docs.silabs.com/bluetooth/latest/series2-secure-debug/"
+            },
+            {
+              "title": "Prod Programming Series 2 And Series 3",
+              "url": "https://docs.silabs.com/bluetooth/latest/prod-programming-series2-and-series3/"
+            },
+            {
+              "title": "Efr 32 Secure Vault Tamper",
+              "url": "https://docs.silabs.com/bluetooth/latest/efr32-secure-vault-tamper/"
+            },
+            {
+              "title": "Authenticating Devices Using Device Certificates",
+              "url": "https://docs.silabs.com/bluetooth/latest/authenticating-devices-using-device-certificates/"
+            },
+            {
+              "title": "Efr 32 Secure Key Storage",
+              "url": "https://docs.silabs.com/bluetooth/latest/efr32-secure-key-storage/"
+            },
+            {
+              "title": "Efr 32 Dci Swd Programming",
+              "url": "https://docs.silabs.com/bluetooth/latest/efr32-dci-swd-programming/"
+            },
+            {
+              "title": "Mbedtls Psa Crypto Porting Guide",
+              "url": "https://docs.silabs.com/bluetooth/latest/mbedtls-psa-crypto-porting-guide/"
+            },
+            {
+              "title": "Series 2 Trustzone",
+              "url": "https://docs.silabs.com/bluetooth/latest/series2-trustzone/"
+            }
+          ]
+        },
+        {
+          "title": "Operating Systems",
+          "menu": [
+            {
+              "id": "bluetooth-operating-systems-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld232-bluetooth-operating-systems-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "integrating-v3x-bluetooth-applications-with-rtos",
+              "title": "Integrating v3.x Bluetooth Applications with RTOS in SDK v3.x and Higher",
+              "menu": [
+                {
+                  "match": "sld645-integrating-v3x-bluetooth-applications-with-rtos/02-system-architecture.md",
+                  "title": "02 System Architecture"
+                },
+                {
+                  "match": "sld645-integrating-v3x-bluetooth-applications-with-rtos/03-application-integration.md",
+                  "title": "03 Application Integration"
+                },
+                {
+                  "match": "sld645-integrating-v3x-bluetooth-applications-with-rtos/04-additional-resources.md",
+                  "title": "04 Additional Resources"
+                },
+                {
+                  "match": "sld645-integrating-v3x-bluetooth-applications-with-rtos/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "amazon-freertos-architecture-examples",
+              "title": "Communicating with AWS IoT Services using Bluetooth LE and FreeRTOS",
+              "menu": [
+                {
+                  "match": "sld648-amazon-freertos-architecture-examples/01-freertos-architecture.md",
+                  "title": "01 Freertos Architecture"
+                },
+                {
+                  "match": "sld648-amazon-freertos-architecture-examples/02-freertos-ble-sample-apps.md",
+                  "title": "02 Freertos Ble Sample Apps"
+                },
+                {
+                  "match": "sld648-amazon-freertos-architecture-examples/03-freertos-aws-test-sample-for-ble.md",
+                  "title": "03 Freertos Aws Test Sample For Ble"
+                },
+                {
+                  "match": "sld648-amazon-freertos-architecture-examples/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "id": "bluetooth-zephyr",
+              "title": "Bluetooth and Zephyr OS",
+              "menu": [
+                {
+                  "match": "sld240-bluetooth-zephyr/index.md",
+                  "title": "Index"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Coexistence",
+          "menu": [
+            {
+              "id": "bluetooth-coexistence-overview",
+              "title": "Overview",
+              "menu": [
+                {
+                  "match": "sld234-bluetooth-coexistence-overview/index.md",
+                  "title": "Index"
+                }
+              ]
+            },
+            {
+              "title": "Multiprotocol Wifi Coexistence Fundamentals",
+              "url": "https://docs.silabs.com/bluetooth/latest/multiprotocol-wifi-coexistence-fundamentals/"
+            },
+            {
+              "title": "Bluetooth Coexistence With Wifi",
+              "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-coexistence-with-wifi/"
+            }
+          ]
+        },
+        {
+          "title": "Location Services (link)",
+          "url": "https://docs.silabs.com/rtl-lib/latest/"
+        },
+        {
+          "id": "bluetooth-electronic-shelf-label",
+          "title": "Electronic Shelf Label",
+          "menu": [
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/04-bluetooth-esl.md",
+              "title": "04 Bluetooth Esl"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/05-preparing-the-esl-network.md",
+              "title": "05 Preparing The Esl Network"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/06-the-esl-network.md",
+              "title": "06 The Esl Network"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/07-modifying-the-bluetooth-esl-examples.md",
+              "title": "07 Modifying The Bluetooth Esl Examples"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/08-demo.md",
+              "title": "08 Demo"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/10-supported-radio-boards.md",
+              "title": "10 Supported Radio Boards"
+            },
+            {
+              "match": "sld679-bluetooth-electronic-shelf-label/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "id": "bluetooth-implementation-tips",
+          "title": "Implementation Tips",
+          "menu": [
+            {
+              "match": "sld274-bluetooth-implementation-tips/index.md",
+              "title": "Index"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bluetooth Stack API Reference",
+      "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/"
+    },
+    {
+      "title": "Bluetooth Service API Reference",
+      "url": "https://docs.silabs.com/bluetooth/latest/bluetooth-service-api/"
+    },
+    {
+      "title": "Mobile Applications",
+      "menu": [
+        {
+          "id": "bluetooth-mobile-applications",
+          "title": "Bluetooth Mobile Applications",
+          "menu": [
+            {
+              "match": "sld127-bluetooth-mobile-applications/index.md",
+              "title": "Index"
+            }
+          ]
+        },
+        {
+          "title": "Simplicity Connect (link)",
+          "url": "https://docs.silabs.com/mobile-apps/latest/mobile-apps-start/"
+        },
+        {
+          "title": "Mobile Apps Finding Smartphone Features",
+          "url": "https://docs.silabs.com/bluetooth/latest/mobile-apps-finding-smartphone-features/"
+        },
+        {
+          "title": "Mobile Apps Suitable Connection Parameters",
+          "url": "https://docs.silabs.com/bluetooth/latest/mobile-apps-suitable-connection-parameters/"
+        },
+        {
+          "title": "Mobile Apps Ble Devices On Ios Settings",
+          "url": "https://docs.silabs.com/bluetooth/latest/mobile-apps-ble-devices-on-ios-settings/"
+        },
+        {
+          "title": "Mobile Apps Using Connect For Ota Dfu",
+          "url": "https://docs.silabs.com/bluetooth/latest/mobile-apps-using-connect-for-ota-dfu/"
+        }
+      ]
+    }
+  ]
+}

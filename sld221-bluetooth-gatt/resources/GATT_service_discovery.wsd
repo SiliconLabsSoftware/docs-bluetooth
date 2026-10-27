@@ -1,0 +1,41 @@
+note over Client App,Client Stack,Server Stack
+    Devices connected to each other. Connection parameters, MTU and PHY settings have been exchanged.
+end note
+
+Client App->>Client Stack: sl_bt_gatt_discover_primary_services 
+activate Server Stack
+activate Client Stack
+
+loop Until end of service list
+    
+    note over Client Stack
+      Read by group type request.
+    end note
+    Client Stack-->>Server Stack: SDP_ServiceSearchRequest
+
+    alt End of service list is not reached
+      note over Server Stack
+	The read by group type response returns a list of attribute handles,
+        the end group handle and attribute value tuples corresponding to the
+        services supported by the server.
+      end note
+      Server Stack-->>Client Stack: SDP_ServiceSearchResponse
+      note right of Client App
+	Received some primary service notifications, The stack raises a gatt service event.
+      end note
+      Client Stack->>Client App: sl_bt_evt_gatt_service
+    else End of service list is reached
+      note over Server Stack
+	This sub-procedure is complete when the Error Response is received and the
+        Error Code is set to «Attribute Not Found» or when the End Group Handle in
+	the Read by Type Group Response is 0xFFFF	    
+      end note
+      Server Stack-->>Client Stack: SDP_ErrorResponse
+
+      note right of Client App
+        At this point, the primary service discovery has finished. The service disco
+        very loop ends here.
+      end note
+      Client Stack->>Client App: sl_bt_evt_gatt_procedure_completed
+    end
+end
