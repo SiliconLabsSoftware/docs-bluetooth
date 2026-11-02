@@ -90,25 +90,31 @@ See [Dynamic Multiprotocol Development with Bluetooth and Proprietary Protocols 
 
 ### NCP Host Examples
 
-NCP host examples are located in \<GSDK-install-location>\app\bluetooth\example_host.
+NCP host examples are located in \<SiSDK-install-location>\bluetooth_le_app\example_host.
 
-- **bt\_host\_empty:** Minimal host-side project structure, used as a starting point for NCP host applications. Use it with the **Bluetooth – NCP** target application flashed to the radio board.
+- **bt\_aoa\_host\_locator:** A locator host sample app that works with **Bluetooth AoA – NCP Locator** target app. It receives IQ samples from the target and estimates the Angle of Arrival (AoA). For more information, see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
 
-- **bt\_host\_ota\_dfu:** Demonstrates how to perform an OTA DFU on a Silicon Labs Bluetooth Device. It requires a WSTK with a radio board flashed with NCP firmware to be used as the GATT client that performs the OTA.
+- **bt\_cs\_host:** The host application for the Channel Sounding (CS) NCP target application.
 
-- **bt\_host\_uart\_dfu:** Demonstrates how to perform a UART DFU on a Silicon Labs Bluetooth Device running NCP firmware.
+- **bt\_host\_cpc\_hci\_bridge:** A background application that runs when the HCI interface is exposed through CPC. The application retrieves HCI commands and events from CPC messages and forwards them to the Bluetooth host running on the PC. Similarly, it forwards HCI commands from the host to the target over CPC.
 
-- **bt\_host\_voice:** On a WSTK programmed with NCP firmware, it to connects to the **Bluetooth – SoC Voice** example, sets the correct configuration on it, receives audio via Bluetooth, and stores audio data into a file.
+- **bt\_host\_empty:** A minimal host-side project structure used as a starting point for NCP host applications. Use it with the **Bluetooth – NCP** target application flashed to the radio board.
 
-- **bt\_aoa\_host\_locator:** A locator host sample app that works together with a **Bluetooth AoA – NCP Locator** target app. It receives IQ samples from the target and estimates the Angle of Arrival (AoA). For more information see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
+- **bt\_host\_esl\_ap:** A Python example that implements Access Point functionality as specified in the Bluetooth Electronic Shelf Label Profile specification. Use it with an NCP ESL AP target.
 
-- **bt\_host\_positioning:** Connects to multiple **bt\_aoa\_host\_locator** sample apps (via MQTT) and estimates a position from Angles of Arrival (AoA). For more information, see *QS175: Application Development with Silicon Labs’ RTL Library.*
+- **bt\_host\_ncp\_test:** A Network Co-Processor (NCP) host application that serves two purposes. It demonstrates how to use user NCP commands and how to implement a simple application to test NCP performance using the default user commands.
 
-- **bt\_host\_positioning\_gui:** Connects to the **bt\_host\_positioning** sample app (via MQTT), reads out the position estimations and displays the tags and locators on a 3D GUI. This sample app is python based. For more information, see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
+- **bt\_host\_ota\_dfu:** Demonstrates how to perform an OTA DFU on a Silicon Labs Bluetooth Device. It requires a WSTK with a radio board flashed with NCP firmware. The WSTK acts as the GATT client that performs the OTA.
+
+- **bt\_host\_positioning:** Connects to multiple **bt\_aoa\_host\_locator** sample apps via MQTT and estimates a position from Angles of Arrival (AoA). For more information, see *QS175: Application Development with Silicon Labs’ RTL Library.*
 
 - **bt\_host\_throughput:** Tests the throughput capabilities of the device in NCP mode and can be used to measure throughput between two devices as well as between a device and a smartphone.
 
-- **bt\_host\_cpc\_hci\_bridge:** A background application to be run when HCI interface is exposed via CPC. This application retrieves the HCI commands/events from the CPC messages and forwards them toward the Bluetooth host running on the PC. Similarly, it forwards the HCI commands from the host toward the target over CPC.
+- **bt\_host\_uart\_dfu:** Demonstrates how to perform a UART DFU on a Silicon Labs Bluetooth Device running NCP firmware.
+
+- **bt\_host\_voice:** On a WSTK programmed with NCP firmware, the application connects to the **Bluetooth – SoC Voice** example, configures it, receives audio over Bluetooth, and stores the audio data in a file.
+
+- **bt\_host\_positioning\_gui:** Connects to the **bt\_host\_positioning** sample app via MQTT, reads the position estimates, and displays the tags and locators in a 3D GUI. This sample app is Python-based. For more information, see [Application Development with Silicon Labs’ RTL Library](https://docs.silabs.com/rtl-lib/latest/direction-finding-solution-guide/).
 
 ## Code Examples
 

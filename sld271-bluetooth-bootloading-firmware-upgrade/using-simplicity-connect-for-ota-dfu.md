@@ -28,52 +28,9 @@ For tutorial purposes, the `Bluetooth - SoC Empty` SDK example application will 
 
 5. Create the **Bluetooth - SoC Thermometer** example project.
 
-6. Build the **Bluetooth - SoC Thermometer** project and double click the `create_bl_files.bat/sh/py` script in the project tree (BLE Post Build component might have to be installed) or use the [Post-Build Editor](https://docs.silabs.com/simplicity-studio-5-users-guide/latest/ss-5-users-guide-building-and-flashing/post-build-editor) to generate the upgrade files. You may need to define two environment variables `PATH_SCMD` and `PATH_GCCARM` before running the script:
+6. Build the **Bluetooth - SoC Thermometer** project and use the [Post-Build Editor](https://docs.silabs.com/ssv6ug/latest/studio-post-build-editor/) to generate the upgrade files.
 
-    <table>
-        <thead>
-            <tr>
-                <th>Variable Name</th>
-                <th>Example Variable Values</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="3">PATH_SCMD</td>
-                <td>C:\SiliconLabs\SimplicityStudio\v5\developer\adapter_packs\commander</td>
-            </tr>
-            <tr>
-                <td>/Applications/Simplicity Studio 5.app/Contents/Eclipse/developer/adapter_packs/commander</td>
-            </tr>
-            <tr>
-                <td>~/SimplicityStudio_v5/developer/adapter_packs/commander</td>
-            </tr>
-            <tr>
-                <td rowspan="3">PATH_GCCARM</td>
-                <td>C:\SiliconLabs\SimplicityStudio\v5\developer\toolchains\gnu_arm\12.2.rel1_2023.7</td>
-            </tr>
-            <tr>
-                <td>/Applications/Simplicity Studio 5.app/Contents/Eclipse/developer/toolchains/gnu_arm/12.2.rel1_2023.7</td>
-            </tr>
-            <tr>
-                <td>~/SimplicityStudio_v5/developer/toolchains/gnu_arm/12.2.rel1_2023.7</td>
-            </tr>
-        </tbody>
-    </table>
-
-    The script creates a folder named `output_gbl` under your project and multiple `.gbl` upgrade image files in this folder:
-
-    - `application.gbl`: user application (including full Bluetooth stack)
-
-    - `application-crc.gbl`: user application with a CRC32 checksum
-
-    - `full.gbl`: user application and Bootloader/AppLoader (full update) for UART DFU, **not needed** in this example.
-
-    - `full-crc.gbl`: user application and Bootloader/AppLoader (full update) with a CRC32 checksum for UART DFU, **not needed** in this example.
-
-    A full update is needed only if the Bootloader/AppLoader needs to be updated. See [Using the Gecko Bootloader with Silicon Labs Bluetooth Applications](/bluetooth/{build-docspace-version}/using-gecko-bootloader-with-bluetooth-apps) for more details. Bootloader .s37 file has to be placed together with the create_bl_files scripts, named appropriately (i.e. bootloader-second-stage.s37) to be incorporated into the full.gbl file.
-
-    ![output.gbl files](resources/outputgbl-batfile.png?darkModeUrl=resources/outputgbl-batfile-dark.png)
+>Note, the value of the "project_name" depends on the project.
 
 7. Transfer the `.gbl` files to your smartphone so the mobile app can find them. You can either transfer them via USB to any folder on your phone or place it to a cloud storage, which is available from your phone (e.g., Google Drive, Dropbox, iCloud, and so on).
 
