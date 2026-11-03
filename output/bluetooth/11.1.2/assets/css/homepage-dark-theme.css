@@ -1,0 +1,107 @@
+/* Base backgrounds */
+[data-theme="dark"] .homepage body,
+[data-theme="dark"] .homepage header {
+  background-color: #303030;
+}
+
+[data-theme="dark"] .homepage footer {
+  background-color: #333333 !important;
+}
+
+[data-theme="dark"] .tile, 
+[data-theme="dark"] .version-filter-input {
+  background-color: #555555 !important;
+}
+
+/* Text colors - White text */
+[data-theme="dark"] .homepage body,
+[data-theme="dark"] .homepage a,
+[data-theme="dark"] .heading,
+[data-theme="dark"] .heading-1,
+[data-theme="dark"] .tile-title,
+[data-theme="dark"] .resource-tile .tile-title,
+[data-theme="dark"] .homepage .header-buttons .md-screen-buttons,
+[data-theme="dark"] .ask-ai-btn {
+  color: #ffffff !important;
+}
+
+/* Submenu links: white, underline on hover (override .homepage a above) */
+[data-theme="dark"] .homepage .nav__submenu a.nav__submenu-item,
+[data-theme="dark"] .homepage .nav__submenu .nav__submenu-item.link {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .homepage .nav__submenu a.nav__submenu-item:hover,
+[data-theme="dark"] .homepage .nav__submenu .nav__submenu-item.link:hover {
+  text-decoration: underline;
+}
+
+/* Text colors - Light gray text */
+[data-theme="dark"] .homepage p,
+[data-theme="dark"] .section-description,
+[data-theme="dark"] .resource-tile .tile-description {
+  color: #cccccc !important;
+}
+
+/* Header elements */
+[data-theme="dark"] .homepage .header_right .tab_list .tab_items button img {
+  filter: invert(1) brightness(1);
+}
+
+[data-theme="dark"] .homepage .site-tab {
+  color: #E1E1E1 !important;
+}
+
+[data-theme="dark"] .homepage .site-tab--active,
+[data-theme="dark"] .homepage .site-tab:hover {
+  background-color: #303030;
+  color: #ffffff !important;
+}
+
+/* Interactive elements */
+[data-theme="dark"] .ask-ai-btn:hover {
+  color: #d91e2a;
+}
+
+[data-theme="dark"] .homepage [data-theme-toggle] {
+  background-color: #000000;
+  box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Icon visibility */
+[data-theme="dark"] .resource-tile .icon {
+  display: none !important;
+}
+
+[data-theme="dark"] .resource-tile .icon-dark {
+  display: block !important;
+}
+
+[data-theme="dark"] .tile-versions {
+  color: #ffffff !important;
+  border-color: #c2c2c2;
+  background-color: #555555;
+}
+
+[data-theme="dark"] .tile-versions.change-version {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .tile-dropdown {
+  background-color: #555555;
+  border-color: #ffffff;
+}
+
+[data-theme="dark"] .tile-dropdown-item {
+  background-color: #555555 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .tile-dropdown-item button {
+  background-color: #555555 !important;
+}
+
+[data-theme="dark"] .toggle-dropdown {
+  color: #ffffff !important;
+}

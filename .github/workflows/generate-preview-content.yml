@@ -1,0 +1,20 @@
+name: Generate Preview Content
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  upload-preview:
+    name: Upload bluetooth preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload bluetooth preview artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bluetooth
+          path: output/bluetooth
+          if-no-files-found: error
