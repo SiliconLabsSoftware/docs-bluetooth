@@ -6,15 +6,15 @@ The **Bluetooth – SoC ESL Tag** example project can be further extended, with 
 
 For API documentation, see [ESL Tag core](/bluetooth/{build-docspace-version}/bluetooth-service-api/esl-tag-core).
 
-### Simple Application Scheduler
+### Application Scheduler
 
-The **Bluetooth - SoC ESL Tag** example uses a software component **Application \> Utility \> Simple Application Scheduler**, which requires configuration if the number of displays and/or LEDs changed.
+The **Bluetooth - SoC ESL Tag** example uses a software component **Application \> Utility \> Scheduler**, which requires configuration if the number of displays and/or LEDs changed.
 
-![Simple Application Scheduler](resources/sld679-image41.png)
+![Scheduler](resources/sld679-image41.png)
 
 The relevant part here is the **Queue length for static allocation** parameter. The value should be "2 + number of displays + number of LEDs". In case of unmodified **Bluetooth - SoC ESL Tag** example built for a WSTK and a radioboard this value is 4: 2 + one display + one LED.
 
-![Simple Application Scheduler configuration](resources/sld679-image42.png)
+![Scheduler configuration](resources/sld679-image42.png)
 
 ### Image Storage
 

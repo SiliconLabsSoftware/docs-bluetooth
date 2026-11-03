@@ -13,11 +13,9 @@ A new connection (toward an advertising Bluetooth device) can be initiated with 
 
 Note that you cannot issue multiple *sl_bt_connection_open* commands immediately after each other even if you know all Bluetooth addresses you want to connect to. You always have to wait for the *sl_bt_evt_connection_opened* event to arrive before initiating a new connection. It is even better if you wait until the *sl_bt_evt_connection_parameters* event because at that moment the connection can be considered stable. To discover the GATT database of the remote device, do so before issuing the second *sl_bt_connection_open* command.
 
-By default, four simultaneous connections are enabled in the stack. To increase the number of supported connections, go to the configuration of the **Bluetooth Core** software component and increase the *Maximum number of connections*:
+By default, the stack supports four simultaneous connections. To increase the number of supported connections, open the **Connection** software component configuration and increase the *Max number of connections reserved for user*:
 
-![Bluetooth Core Component](resources/bluetooth-core.png)
-
-![Configuring the Maximum Number of Connections](resources/max-num-conn.png)
+![Configuring the Maximum Number of Connections](resources/max-num-conn.png?darkModeUrl=resources/max-num-conn.png)
 
 ## Saving Connection Handles
 

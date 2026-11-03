@@ -414,18 +414,6 @@
                 {
                   "match": "sld713-gatt-configurator-users-guide-ble-btmesh/index.md",
                   "title": "Introduction"
-                },
-                {
-                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/01-gatt-configurator-overview.md",
-                  "title": "GATT Configurator Overview"
-                },
-                {
-                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/02-use-cases.md",
-                  "title": "Use Cases"
-                },
-                {
-                  "match": "sld713-gatt-configurator-users-guide-ble-btmesh/03-dynamic-gatt-configuration.md",
-                  "title": "Dynamic GATT Configuration"
                 }
               ]
             },
